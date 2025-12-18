@@ -1,13 +1,13 @@
 
-import java.util.Scanner;
+using System;
 public class ReverseArray {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int size = sc.nextInt();
-        int arr[] = new int[size];
+    static void Main() {
+        
+        int size = Convert.ToInt32(Console.ReadLine());
+        int[] arr = new int[size];
 
         for(int i=0;i<size;i++){
-            arr[i] = sc.nextInt();
+            arr[i] = Convert.ToInt32(Console.ReadLine());
         }
         
         for(int j=0;j<size/2;j++){
@@ -17,7 +17,7 @@ public class ReverseArray {
         }
 
         for(int k=0;k<size;k++){
-            System.out.println(arr[k]);
+            Console.WriteLine(arr[k]);
         }
     }
 

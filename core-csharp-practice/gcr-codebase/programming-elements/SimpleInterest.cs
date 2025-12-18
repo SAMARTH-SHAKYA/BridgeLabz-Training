@@ -7,6 +7,6 @@ public class SimpleInterest {
         int r = Convert.ToInt32(Console.ReadLine());
         int t = Convert.ToInt32(Console.ReadLine());
 
-        Console.WriteLine(p*r*t);
+        Console.WriteLine((p*r*t)/100);
     }
 }
