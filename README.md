@@ -30,3 +30,20 @@
 
 ---
 
+## 📅 Day 02
+**Date:** 19-12-2025 (Friday)
+### 📘 What I Learned
+- Architecture of csharp/.net
+- Naming conventions
+- C# Elements of Programming
+- Memory Management and Access Modifiers 
+  
+### 📝 Assignment for the Day
+- Level 1 Basic Coding Problems
+- Implement DataTypes, Operators and Access Modifiers
+
+### 🔮 Upcoming Learning
+- Control Flow Statements 
+
+---
+
