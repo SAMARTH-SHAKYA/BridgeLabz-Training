@@ -47,3 +47,18 @@
 
 ---
 
+## 📅 Day 03
+**Date:** 20-12-2025 (Friday)
+### 📘 What I Learned
+- Memory Management and Access Modifiers 
+- Input and Output in csharp
+  
+### 📝 Assignment for the Day
+- Level 2 Basic Coding Problems
+- Implement DataTypes, Operators and Access Modifiers
+
+### 🔮 Upcoming Learning
+- Control Flow Statements 
+
+---
+
