@@ -62,3 +62,24 @@
 
 ---
 
+## 📅 Day 04
+**Date:** 22-12-2025 (Monday)
+### 📘 What I Learned
+- Control Flow
+- if-else, For loop, while loop, switch case, do-while loop
+- pointers about garbage collection in csharp
+  
+### 📝 Assignment for the Day
+- Control flow Level1, Level 2 Coding Problems
+- Study about control flow  
+
+### 🔮 Upcoming Learning
+- Arrays
+
+### 📝 LeetCode/Self-Learning Questions
+- Delete Columns To Make Sorted
+- Palindrom number
+
+
+---
+
