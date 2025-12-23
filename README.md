@@ -22,11 +22,6 @@
 
 ### 🔮 Upcoming Learning
 - C# Elements of Programming:
-  - Variables  
-  - Literals  
-  - Primitive Data Types  
-  - Basic Input / Output  
-  - Operators  
 
 ---
 
@@ -79,6 +74,24 @@
 ### 📝 LeetCode/Self-Learning Questions
 - Delete Columns To Make Sorted
 - Palindrom number
+
+
+---
+
+## 📅 Day 05
+**Date:** 23-12-2025 (Monday)
+### 📘 What I Learned
+- Array
+- Initiliaze and declaring
+- 2D Array
+- Assembly
+  
+### 📝 Assignment for the Day
+- Control flow Level3 and Arrays Level1 Coding Problems
+- Study about Arrays
+
+### 🔮 Upcoming Learning
+- Strings
 
 
 ---
