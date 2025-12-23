@@ -79,7 +79,7 @@
 ---
 
 ## 📅 Day 05
-**Date:** 23-12-2025 (Monday)
+**Date:** 23-12-2025 (Tuesday)
 ### 📘 What I Learned
 - Array
 - Initiliaze and declaring
