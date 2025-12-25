@@ -95,4 +95,18 @@
 
 
 ---
+## 📅 Day 05
+**Date:** 24-12-2025 (Wednesday)
+### 📘 What I Learned
+- 2D Array
+- Methods
+- Types of Methods
+
+  
+### 📝 Assignment for the Day
+- Arrays Level1 and Level2 Coding Problems
+- Control Flow Level 1,2 and 3 Coding Problems
+
+### 🔮 Upcoming Learning
+- Strings
 
