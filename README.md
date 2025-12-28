@@ -95,7 +95,7 @@
 
 
 ---
-## 📅 Day 05
+## 📅 Day 06
 **Date:** 24-12-2025 (Wednesday)
 ### 📘 What I Learned
 - 2D Array
@@ -110,3 +110,20 @@
 ### 🔮 Upcoming Learning
 - Strings
 
+---
+
+## 📅 Day 07
+**Date:** 26-12-2025 (Friday)
+### 📘 What I Learned
+- Strings
+- Built in function
+- Exceptions
+- How string is stored in memory
+  
+### 📝 Assignment for the Day
+- Strings programming questions
+- Extra Strings programming questions
+- Built in functions level 1 and 2
+
+### 🔮 Upcoming Learning
+- Object oriented programming
