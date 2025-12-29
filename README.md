@@ -127,3 +127,22 @@
 
 ### 🔮 Upcoming Learning
 - Object oriented programming
+
+---
+
+## 📅 Day 08
+**Date:** 29-12-2025 (Monday)
+### 📘 What I Learned
+- Approach of solving real life problems
+- Objects
+- Classes
+  
+### 📝 Assignment for the Day
+- Snakes and Ladder
+- Student score manager
+- String formattor
+- Temperature analyzer
+- Paragraph analyzer
+
+### 🔮 Upcoming Learning
+- Inheritance
