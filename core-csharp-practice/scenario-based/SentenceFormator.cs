@@ -14,7 +14,7 @@ namespace BridgeLabzTraining.Senario_based
     internal class SentenceFormator
     {
 
-        public static void Main()
+        public void FormatSentence()
         {
             Console.WriteLine("------Welcome to the Sentence Formattor------");
             TakeInput();
@@ -22,7 +22,7 @@ namespace BridgeLabzTraining.Senario_based
         }
 
         // Method to take the input 
-        public static void TakeInput()
+        public void TakeInput()
         {
             // Taking input from the user 
             Console.WriteLine("Enter your paragraph");
@@ -32,7 +32,7 @@ namespace BridgeLabzTraining.Senario_based
         }
 
         //Method for Taking operation from the user and printing menu
-        public static void Menu(string strFromUser)
+        public  void Menu(string strFromUser)
         {
             bool isExit = false;
             while (isExit == false)
@@ -90,7 +90,7 @@ namespace BridgeLabzTraining.Senario_based
         }
 
         // method for removing extra spaces
-        public static string RemoveExtraSpaces(string strFromUser)
+        public string RemoveExtraSpaces(string strFromUser)
         {
             string res = "";
 
@@ -134,7 +134,7 @@ namespace BridgeLabzTraining.Senario_based
         }
 
         //method for making valid letter to capital
-        public static string CapitalParagraph(string strFromUser)
+        public  string CapitalParagraph(string strFromUser)
         {
             string res = "";
             if (char.IsLower(strFromUser[0])){
@@ -173,7 +173,7 @@ namespace BridgeLabzTraining.Senario_based
         }
 
         //method for adding spaces after punctuation
-        public static string AddSpacesAfterPunctuation(string strFromUser)
+        public  string AddSpacesAfterPunctuation(string strFromUser)
         {
             string res = "";
 
