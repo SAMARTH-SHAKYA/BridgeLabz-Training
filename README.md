@@ -146,3 +146,19 @@
 
 ### 🔮 Upcoming Learning
 - Inheritance
+
+  ---
+
+## 📅 Day 09
+**Date:** 30-12-2025 (Tuesday)
+### 📘 What I Learned
+- Constructor
+- types of constructor
+- Usage of access modifiers
+  
+### 📝 Assignment for the Day
+- Student Quiz Grader
+- Library Management system
+
+### 🔮 Upcoming Learning
+- Inheritance
