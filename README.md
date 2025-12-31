@@ -161,4 +161,22 @@
 - Library Management system
 
 ### 🔮 Upcoming Learning
+- this,static keywords
+
+  ---
+
+## 📅 Day 10
+**Date:** 31-12-2025 (Wednesday)
+### 📘 What I Learned
+- this keyword
+- static keyword
+- sealed and final keyword
+- is operator
+  
+### 📝 Assignment for the Day
+- Bank management system
+- Question on sealed, static, this and  final keyword
+- Invoice Creator
+
+### 🔮 Upcoming Learning
 - Inheritance
