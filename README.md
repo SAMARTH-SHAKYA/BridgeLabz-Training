@@ -180,3 +180,18 @@
 
 ### 🔮 Upcoming Learning
 - Inheritance
+
+  ---
+
+## 📅 Day 11
+**Date:** 01-01-2026(Thrusday)
+### 📘 What I Learned
+- more about classes and objects
+- how to create class diagram 
+  
+### 📝 Assignment for the Day
+- Cafeteria menu app
+- Object oriented design principles
+
+### 🔮 Upcoming Learning
+- OOP pillars implementation
