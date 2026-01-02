@@ -195,3 +195,19 @@
 
 ### 🔮 Upcoming Learning
 - OOP pillars implementation
+
+
+  ---
+
+## 📅 Day 12
+**Date:** 02-01-2026(Friday)
+### 📘 What I Learned
+- Inheritance
+- Implementation of inheritance
+  
+### 📝 Assignment for the Day
+- Inheritance
+- Scenario based question
+
+### 🔮 Upcoming Learning
+- Polymorphism
