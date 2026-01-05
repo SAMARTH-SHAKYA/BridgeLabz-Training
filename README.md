@@ -211,3 +211,35 @@
 
 ### 🔮 Upcoming Learning
 - Polymorphism
+
+  ---
+
+## 📅 Day 13
+**Date:** 03-01-2026(Saturday)
+### 📘 What I Learned
+- Polymorphism
+- Types of polymorphism
+- Encapsulation
+  
+### 📝 Assignment for the Day
+- Class diagram
+- Scenario based question
+
+### 🔮 Upcoming Learning
+- Interface and Abstraction
+
+  ---
+
+## 📅 Day 14
+**Date:** 05-01-2026(Monday)
+### 📘 What I Learned
+- Interface
+- Abstraction
+- Implementaion
+  
+### 📝 Assignment for the Day
+- Interface, Encapsualtion and Abstraction mixed programming questions
+- Scenario based question
+
+### 🔮 Upcoming Learning
+- Data structutes
