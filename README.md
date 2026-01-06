@@ -243,3 +243,18 @@
 
 ### 🔮 Upcoming Learning
 - Data structutes
+
+  ---
+
+## 📅 Day 15
+**Date:** 06-01-2026(Tuesday)
+### 📘 What I Learned
+- Revising oops concpet
+- applying all conpets at once
+  
+### 📝 Assignment for the Day
+- Interface, Encapsualtion and Abstraction mixed programming questions
+- Scenario based question
+
+### 🔮 Upcoming Learning
+- Data structutes
