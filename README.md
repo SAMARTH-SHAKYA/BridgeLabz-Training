@@ -258,3 +258,20 @@
 
 ### 🔮 Upcoming Learning
 - Data structutes
+
+  ---
+
+## 📅 Day 16
+**Date:** 06-01-2026(Wednesday)
+### 📘 What I Learned
+- How version control works
+- Linked List
+- Implementation of Linked List
+  
+### 📝 Assignment for the Day
+- Interface, Encapsualtion and Abstraction mixed programming questions
+- Scenario based question (version control)
+- Programming question on linked list
+
+### 🔮 Upcoming Learning
+- Stack or Queue
