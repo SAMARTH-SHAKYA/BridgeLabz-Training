@@ -28,5 +28,15 @@ namespace BridgeLabzTraining.oops_csharp_encapsulation_polymorphism_interface_ab
             }
             return "Absent";
         }
+
+        // UC 2 --- method to calculate daily wage
+        public double EmployeeWage(Employee employee, string checkAttendace)
+        {
+            if (checkAttendace == "absent")
+            {
+                return 0;
+            }
+            return 20 * 8;
+        }
     }
 }
