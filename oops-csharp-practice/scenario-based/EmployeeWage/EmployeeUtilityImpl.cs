@@ -18,8 +18,8 @@ namespace BridgeLabzTraining.oops_csharp_encapsulation_polymorphism_interface_ab
         // UC 1 ---- method to check attendance for an employee
         public string CheckAttendance(Employee employee)
         {
-            Random rand = new Random();
-            int attendance = rand.Next(0, 2);
+            Random random = new Random();
+            int attendance = random.Next(0, 2);
             
             if(attendance == 0)
             {
@@ -43,8 +43,8 @@ namespace BridgeLabzTraining.oops_csharp_encapsulation_polymorphism_interface_ab
 
         public string PartTimeEmployee(Employee employee)
         {
-            Random rand = new Random();
-            int partTimer = rand.Next(0, 2);
+            Random random = new Random();
+            int partTimer = random.Next(0, 2);
 
             if (partTimer == 0)
             {
@@ -53,5 +53,17 @@ namespace BridgeLabzTraining.oops_csharp_encapsulation_polymorphism_interface_ab
             }
             return "Full Time Employee";
         }
+
+        // UC 5 --- method to calculate monthly wage of a employee
+
+        public double CalculateMonthWage(Employee employee)
+        {
+            Random random = new Random();
+            int days = random.Next(1, 21);
+            Console.WriteLine($"Employee worked for {days} days");
+            return days * 160;
+        }
+
+
     }
 }

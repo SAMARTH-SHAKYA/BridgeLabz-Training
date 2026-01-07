@@ -27,12 +27,15 @@ namespace BridgeLabzTraining.oops_csharp_encapsulation_polymorphism_interface_ab
 
             bool isTure = true;
 
+
+            // UC 4 Added switch case 
             while (isTure) 
             {
                 Console.WriteLine("Press 1 : Check Employee is Present or Absent");
                 Console.WriteLine("Press 2 : Check Daily Wage of employee");
                 Console.WriteLine("Press 3 : Check Employee is full time or part time");
-                Console.WriteLine("Press 4 : Exit");
+                Console.WriteLine("Press 4 : Check employee monthly wage");
+                Console.WriteLine("Press 5 : Exit");
 
                 int choice = Convert.ToInt32(Console.ReadLine());
 
@@ -54,8 +57,13 @@ namespace BridgeLabzTraining.oops_csharp_encapsulation_polymorphism_interface_ab
                         Console.WriteLine(employeeContract);
                         break;
 
-
                     case 4:
+                        double wage = employeeUtility.CalculateMonthWage(E1);
+                        Console.WriteLine(wage);
+                        break;
+
+
+                    case 5:
                         isTure = false;
                         break;
 
