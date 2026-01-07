@@ -11,7 +11,7 @@ namespace BridgeLabzTraining.oops_csharp_encapsulation_polymorphism_interface_ab
         // crreating a temporary employee
         public Employee AddEmployee()
         {
-            employee = new Employee("SC001","Samarth","DOT NET");
+            employee = new Employee("SC001", "Samarth", "DOT NET");
             return employee;
 
         }
@@ -20,10 +20,10 @@ namespace BridgeLabzTraining.oops_csharp_encapsulation_polymorphism_interface_ab
         {
             Random random = new Random();
             int attendance = random.Next(0, 2);
-            
-            if(attendance == 0)
+
+            if (attendance == 0)
             {
-                
+
                 return "Present";
             }
             return "Absent";
@@ -64,6 +64,20 @@ namespace BridgeLabzTraining.oops_csharp_encapsulation_polymorphism_interface_ab
             return days * 160;
         }
 
+        // UC 6 --- method to calculate wage till now
 
+        public double CalculateWageTillNow(Employee employee)
+        {
+            Random random = new Random();
+            int days = random.Next(1, 31);
+            int hours = random.Next(1, 120);
+
+            if (days > 20 || hours > 100)
+            {
+                return 20 * 8;
+            }
+            return days * 8;
+
+        }
     }
 }

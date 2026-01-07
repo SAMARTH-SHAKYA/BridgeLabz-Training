@@ -35,7 +35,8 @@ namespace BridgeLabzTraining.oops_csharp_encapsulation_polymorphism_interface_ab
                 Console.WriteLine("Press 2 : Check Daily Wage of employee");
                 Console.WriteLine("Press 3 : Check Employee is full time or part time");
                 Console.WriteLine("Press 4 : Check employee monthly wage");
-                Console.WriteLine("Press 5 : Exit");
+                Console.WriteLine("Press 5 : Check employee wage till now");
+                Console.WriteLine("Press 6 : Exit");
 
                 int choice = Convert.ToInt32(Console.ReadLine());
 
@@ -62,8 +63,12 @@ namespace BridgeLabzTraining.oops_csharp_encapsulation_polymorphism_interface_ab
                         Console.WriteLine(wage);
                         break;
 
-
                     case 5:
+                        double wageTillNow = employeeUtility.CalculateWageTillNow(E1);
+                        Console.WriteLine(wageTillNow);
+                        break;
+
+                    case 6:
                         isTure = false;
                         break;
 

@@ -16,5 +16,7 @@ namespace BridgeLabzTraining.oops_csharp_encapsulation_polymorphism_interface_ab
         public string PartTimeEmployee(Employee employee);
 
         public double CalculateMonthWage(Employee employee);
+
+        public double CalculateWageTillNow(Employee employee);
     }
 }
