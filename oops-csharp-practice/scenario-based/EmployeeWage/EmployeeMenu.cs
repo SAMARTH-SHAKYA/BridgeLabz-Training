@@ -14,16 +14,58 @@ namespace BridgeLabzTraining.oops_csharp_encapsulation_polymorphism_interface_ab
             //checking functionality of checkattendance
             employeeUtility = new EmployeeUtilityImpl();
             Employee E1 = employeeUtility.AddEmployee();
-            string checkAttendance = employeeUtility.CheckAttendance(E1);
-            Console.WriteLine(checkAttendance);
+            //string checkAttendance = employeeUtility.CheckAttendance(E1);
+            //Console.WriteLine(checkAttendance);
 
             //checking functionality of calculate dailywage
-            double dailyWage = employeeUtility.EmployeeWage(E1, checkAttendance);
-            Console.WriteLine(dailyWage);
+            //double dailyWage = employeeUtility.EmployeeWage(E1, checkAttendance);
+            //Console.WriteLine(dailyWage);
 
             //checking functionality for part time employee 
-            string employeeContract = employeeUtility.PartTimeEmployee(E1);
-            Console.WriteLine(employeeContract);
+            //string employeeContract = employeeUtility.PartTimeEmployee(E1);
+            //Console.WriteLine(employeeContract);
+
+            bool isTure = true;
+
+            while (isTure) 
+            {
+                Console.WriteLine("Press 1 : Check Employee is Present or Absent");
+                Console.WriteLine("Press 2 : Check Daily Wage of employee");
+                Console.WriteLine("Press 3 : Check Employee is full time or part time");
+                Console.WriteLine("Press 4 : Exit");
+
+                int choice = Convert.ToInt32(Console.ReadLine());
+
+                switch (choice) 
+                {
+                    case 1:
+                        string checkAttendance = employeeUtility.CheckAttendance(E1);
+                        Console.WriteLine(checkAttendance);
+                        break;
+
+                    case 2:
+                        string checkAttendance1 = employeeUtility.CheckAttendance(E1);
+                        double dailyWage = employeeUtility.EmployeeWage(E1, checkAttendance1);
+                        Console.WriteLine(dailyWage);
+                        break;
+
+                    case 3:
+                        string employeeContract = employeeUtility.PartTimeEmployee(E1);
+                        Console.WriteLine(employeeContract);
+                        break;
+
+
+                    case 4:
+                        isTure = false;
+                        break;
+
+                    default:
+                        Console.WriteLine("Invalid input");
+                        break;
+                }
+
+            }
+
         }
     }
 }
