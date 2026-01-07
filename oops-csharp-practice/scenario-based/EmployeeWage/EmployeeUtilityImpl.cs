@@ -32,11 +32,26 @@ namespace BridgeLabzTraining.oops_csharp_encapsulation_polymorphism_interface_ab
         // UC 2 --- method to calculate daily wage
         public double EmployeeWage(Employee employee, string checkAttendace)
         {
-            if (checkAttendace == "absent")
+            if (checkAttendace == "Absent")
             {
                 return 0;
             }
             return 20 * 8;
+        }
+
+        // UC 3 --- method to check part time employee or full time employee
+
+        public string PartTimeEmployee(Employee employee)
+        {
+            Random rand = new Random();
+            int partTimer = rand.Next(0, 2);
+
+            if (partTimer == 0)
+            {
+
+                return "Part Time Employee";
+            }
+            return "Full Time Employee";
         }
     }
 }

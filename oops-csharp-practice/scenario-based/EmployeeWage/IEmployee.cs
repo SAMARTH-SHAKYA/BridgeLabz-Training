@@ -11,5 +11,8 @@ namespace BridgeLabzTraining.oops_csharp_encapsulation_polymorphism_interface_ab
         public string CheckAttendance(Employee employee);
 
         public double EmployeeWage(Employee employee,string checkAttendace);
+
+
+        public string PartTimeEmployee(Employee employee);
     }
 }

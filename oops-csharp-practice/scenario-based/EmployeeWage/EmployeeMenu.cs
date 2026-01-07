@@ -20,6 +20,10 @@ namespace BridgeLabzTraining.oops_csharp_encapsulation_polymorphism_interface_ab
             //checking functionality of calculate dailywage
             double dailyWage = employeeUtility.EmployeeWage(E1, checkAttendance);
             Console.WriteLine(dailyWage);
+
+            //checking functionality for part time employee 
+            string employeeContract = employeeUtility.PartTimeEmployee(E1);
+            Console.WriteLine(employeeContract);
         }
     }
 }
