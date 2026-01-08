@@ -262,7 +262,7 @@
   ---
 
 ## 📅 Day 16
-**Date:** 06-01-2026(Wednesday)
+**Date:** 07-01-2026(Wednesday)
 ### 📘 What I Learned
 - How version control works
 - Linked List
@@ -275,3 +275,18 @@
 
 ### 🔮 Upcoming Learning
 - Stack or Queue
+
+## 📅 Day 17
+**Date:** 08-01-2026(Thrusday)
+### 📘 What I Learned
+- Stack
+- Queue
+- Implementation
+  
+### 📝 Assignment for the Day
+- Interface, Encapsualtion and Abstraction mixed programming questions
+- Scenario based question (version control)
+- Programming question on Stack and queue
+
+### 🔮 Upcoming Learning
+- Tree
