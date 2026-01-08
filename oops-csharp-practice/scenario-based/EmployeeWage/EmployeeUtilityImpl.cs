@@ -71,12 +71,13 @@ namespace BridgeLabzTraining.oops_csharp_encapsulation_polymorphism_interface_ab
             Random random = new Random();
             int days = random.Next(1, 31);
             int hours = random.Next(1, 120);
-
-            if (days > 20 || hours > 100)
+            Console.WriteLine($"Number of days worked in this month {days}");
+            Console.WriteLine($"Number of hours worked in this month {hours}");
+            if (days > 20 && hours > 100)
             {
-                return 20 * 8;
+                return 100 * 20;
             }
-            return days * 8;
+            return hours * 20;
 
         }
     }

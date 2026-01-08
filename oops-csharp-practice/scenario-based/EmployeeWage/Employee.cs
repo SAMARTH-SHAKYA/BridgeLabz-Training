@@ -22,7 +22,7 @@ namespace BridgeLabzTraining.oops_csharp_encapsulation_polymorphism_interface_ab
         }
         public override string ToString()
         {
-            return $"ID: {EmployeeId}, Name: {EmployeeName}, Salary: {EmployeeSalary}";
+            return $"ID: {EmployeeId}, Name: {EmployeeName}";
         }
     }
 }

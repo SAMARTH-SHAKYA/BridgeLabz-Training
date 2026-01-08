@@ -11,6 +11,7 @@ namespace BridgeLabzTraining.oops_csharp_encapsulation_polymorphism_interface_ab
         public void EmployeeChoice()
         {
 
+            Console.WriteLine("Welcome to Employee Wage Computation Program");
             //checking functionality of checkattendance
             employeeUtility = new EmployeeUtilityImpl();
             Employee E1 = employeeUtility.AddEmployee();
@@ -44,27 +45,32 @@ namespace BridgeLabzTraining.oops_csharp_encapsulation_polymorphism_interface_ab
                 {
                     case 1:
                         string checkAttendance = employeeUtility.CheckAttendance(E1);
+                        Console.Write($"{E1.ToString()}, Attendance : ");
                         Console.WriteLine(checkAttendance);
                         break;
 
                     case 2:
                         string checkAttendance1 = employeeUtility.CheckAttendance(E1);
                         double dailyWage = employeeUtility.EmployeeWage(E1, checkAttendance1);
+                        Console.Write($"{E1.ToString()}, Salary : ");
                         Console.WriteLine(dailyWage);
                         break;
 
                     case 3:
                         string employeeContract = employeeUtility.PartTimeEmployee(E1);
+                        Console.Write($"{E1.ToString()}, Contract : ");
                         Console.WriteLine(employeeContract);
                         break;
 
                     case 4:
                         double wage = employeeUtility.CalculateMonthWage(E1);
+                        Console.Write($"{E1.ToString()}, Monthly wage : ");
                         Console.WriteLine(wage);
                         break;
 
                     case 5:
                         double wageTillNow = employeeUtility.CalculateWageTillNow(E1);
+                        Console.WriteLine($"{E1.ToString()}");
                         Console.WriteLine(wageTillNow);
                         break;
 
