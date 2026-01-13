@@ -6,12 +6,11 @@ namespace BridgeLabzTraining.Scenario_oops.CustomFurnitureMnufacturing
 {
     internal class FurnitureUtility : IFurniture
     {
-        private Furniture furniture;
+        private Furniture furniture=new Furniture();
         
 
         public int MaxProfit(int n)
         {
-            furniture = new Furniture();
             int[] length = furniture.getLength();
             int[] price = furniture.getPrice();
 
@@ -40,13 +39,13 @@ namespace BridgeLabzTraining.Scenario_oops.CustomFurnitureMnufacturing
         }
 
 
-        private Furniture furniture1;
-        public int MaxProfitWithWaste(int n, int wasteAllowed)
+       
+        public  int MaxProfitWithWaste(int n, int wasteAllowed)
         {
 
-            furniture1 = new Furniture();
-            int[] length = furniture1.getLength();
-            int[] price = furniture1.getPrice();
+           
+            int[] length = furniture.getLength();
+            int[] price = furniture.getPrice();
             int[] dp = new int[n + 1];
 
             for (int i = 1; i <= n; i++)

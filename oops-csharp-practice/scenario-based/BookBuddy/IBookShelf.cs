@@ -7,13 +7,10 @@ namespace BridgeLabzTraining.Scenario_oops.BookBuddy
 {
     internal interface IBookShelf
     {
-        public void AddBook(ArrayList books, string bookFromUser);
-        public ArrayList DatabaseFetch();
-
-        public void SortBooks(ArrayList books);
-
-        public void SearchByAuthor(ArrayList books, string author);
-
-        public void ShowBooks(ArrayList books);
+        public void AddBook(ref string[] books, string bookFromUser);
+        public string[] DatabaseFetch();
+        public void SortBooks(ref string[] books);
+        public void SearchByAuthor(string[] books, string author);
+        public void ShowBooks(string[] books);
     }
 }

@@ -7,42 +7,43 @@ namespace BridgeLabzTraining.Scenario_oops.BookBuddy
 {
     internal class BookShelfUtility : IBookShelf
     {
-        public ArrayList DatabaseFetch()
+        public string[] DatabaseFetch()
         {
-            ArrayList books = new ArrayList();
-
-            books.Add("The Silent Forest - Arjun Mehta");
-            books.Add("Wings of Dreams - Riya Sharma");
-            books.Add("Beyond the Horizon - Amit Verma");
-            books.Add("Mystery of the Old House - Neha Kapoor");
-            books.Add("Code of Life - Rahul Singh");
-            books.Add("The Last Sunset - Ananya Roy");
-            books.Add("Journey to Nowhere - Karan Malhotra");
-
+            string[] books = {
+                    "The Silent Forest - Arjun Mehta",
+                    "Wings of Dreams - Riya Sharma",
+                    "Beyond the Horizon - Amit Verma",
+                    "Mystery of the Old House - Neha Kapoor",
+                    "Code of Life - Rahul Singh",
+                    "The Last Sunset - Ananya Roy",
+                    "Journey to Nowhere - Karan Malhotra"
+                };
 
             return books;
         }
 
 
-        public void AddBook(ArrayList books, string bookFromUser)
+        public void AddBook(ref string[] books, string bookFromUser)
         {
             try
             {
-                //check if format is correct
                 if (!bookFromUser.Contains(" - "))
-                {
                     throw new FormatException("Invalid format! Use: Title - Author");
-                }
 
                 string[] parts = bookFromUser.Split(" - ");
-
                 if (parts.Length != 2 || string.IsNullOrWhiteSpace(parts[0]) || string.IsNullOrWhiteSpace(parts[1]))
-                {
-                    throw new FormatException("Invalid format! Title or Author is missing.");
-                }
+                    throw new FormatException("Invalid format! Title or Author missing.");
 
-                books.Add(bookFromUser);
-                Console.WriteLine("Successfully added book to the database");
+                int newSize = books.Length + 1;
+                string[] newBooks = new string[newSize];
+
+                for (int i = 0; i < books.Length; i++)
+                    newBooks[i] = books[i];
+
+                newBooks[newSize - 1] = bookFromUser;
+                books = newBooks;
+
+                Console.WriteLine("Book added successfully!");
             }
             catch (FormatException ex)
             {
@@ -50,68 +51,57 @@ namespace BridgeLabzTraining.Scenario_oops.BookBuddy
             }
         }
 
-        public void SortBooks(ArrayList books)
-        {
-            string[] booksArray = (string[])books.ToArray(typeof(string));
 
-            int n = booksArray.Length;
+        public void SortBooks(ref string[] books)
+        {
+            int n = books.Length;
 
             for (int i = 0; i < n - 1; i++)
             {
                 for (int j = 0; j < n - i - 1; j++)
                 {
-                    string title1 = booksArray[j].Split(" - ")[0];
-                    string title2 = booksArray[j + 1].Split(" - ")[0];
+                    string title1 = books[j].Split(" - ")[0];
+                    string title2 = books[j + 1].Split(" - ")[0];
 
                     if (string.Compare(title1, title2) > 0)
                     {
-                        // Swap
-                        string temp = booksArray[j];
-                        booksArray[j] = booksArray[j + 1];
-                        booksArray[j + 1] = temp;
+                        string temp = books[j];
+                        books[j] = books[j + 1];
+                        books[j + 1] = temp;
                     }
                 }
-            }
-
-            books.Clear();
-
-
-            for (int i = 0; i < n; i++)
-            {
-                books.Add(booksArray[i]);
             }
         }
 
 
-        public void SearchByAuthor(ArrayList books, string author)
+
+        public void SearchByAuthor(string[] books, string author)
         {
+            bool found = false;
 
-            foreach (string book in books)
+            for (int i = 0; i < books.Length; i++)
             {
-                string[] parts = book.Split(" - ");
-
-                if (parts.Length == 2)
+                string[] parts = books[i].Split(" - ");
+                if (parts.Length == 2 && parts[1].ToLower() == author.ToLower())
                 {
-                    string bookAuthor = parts[1];
-
-                    if (bookAuthor.ToLower() == author.ToLower())
-                    {
-                        Console.WriteLine("book founded for this author.");
-                        Console.WriteLine(book);
-                        return;
-                    }
+                    Console.WriteLine(books[i]);
+                    found = true;
                 }
             }
-            Console.WriteLine("No books found for this author.");
+
+            if (!found)
+                Console.WriteLine("No books found for this author.");
         }
 
 
-        public void ShowBooks(ArrayList books) 
+
+        public void ShowBooks(string[] books)
         {
-            foreach (string book in books) 
+            for (int i = 0; i < books.Length; i++)
             {
-                Console.WriteLine(book);
+                Console.WriteLine(books[i]);
             }
         }
+
     }
 }
