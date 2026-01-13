@@ -6,7 +6,7 @@ namespace BridgeLabzTraining.Scenario_oops.CinemaTime
 {
     internal class CinemaMain
     {
-        public static void Main(string[] args)
+        public static void main(string[] args)
         {
             CinemaMenu menu = new CinemaMenu();
             menu.Menu();

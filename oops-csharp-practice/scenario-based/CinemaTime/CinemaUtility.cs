@@ -32,8 +32,7 @@ namespace BridgeLabzTraining.Scenario_oops.CinemaTime
 
         public void AddMovie(ref string[] titles, ref string[] times, string title, string time)
         {
-            try
-            {
+            
                 ValidateTime(time);
 
                 int newSize = titles.Length + 1;
@@ -54,11 +53,7 @@ namespace BridgeLabzTraining.Scenario_oops.CinemaTime
                 times = newTimes;
 
                 Console.WriteLine("Movie added successfully!");
-            }
-            catch (InvalidTimeFormatException ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
+            
         }
 
         private void ValidateTime(string time)
@@ -66,13 +61,18 @@ namespace BridgeLabzTraining.Scenario_oops.CinemaTime
             string[] parts = time.Split(':');
 
             if (parts.Length != 2)
-                throw new InvalidTimeFormatException("Invalid time format! Use HH:MM");
+            {
+                Console.WriteLine("Invalid time format Use HH:MM");
+            }
 
             int hour = Convert.ToInt32(parts[0]);
             int minute = Convert.ToInt32(parts[1]);
 
             if (hour < 0 || hour > 23 || minute < 0 || minute > 59)
-                throw new InvalidTimeFormatException("Invalid time value! Example: 18:30");
+            {
+                Console.WriteLine("Invalid time value Example: 18:30");
+            }
+                
         }
 
         public void SearchMovie(string[] titles, string[] times, string keyword)

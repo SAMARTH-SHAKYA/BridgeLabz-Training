@@ -6,7 +6,7 @@ namespace BridgeLabzTraining.Scenario_oops.BookBuddy
 {
     internal class BookShelfMain
     {
-        public static void Main(string[] args)
+        public static void main(string[] args)
         {
             BookShelfMenu menu = new BookShelfMenu();
             menu.Menu();

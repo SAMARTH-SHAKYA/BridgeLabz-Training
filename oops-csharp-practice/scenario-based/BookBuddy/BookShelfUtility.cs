@@ -25,14 +25,19 @@ namespace BridgeLabzTraining.Scenario_oops.BookBuddy
 
         public void AddBook(ref string[] books, string bookFromUser)
         {
-            try
+            
+            if (!bookFromUser.Contains(" - "))
             {
-                if (!bookFromUser.Contains(" - "))
-                    throw new FormatException("Invalid format! Use: Title - Author");
+                Console.WriteLine("Invalid format! Use: Title - Author");
+            }
+                    
 
-                string[] parts = bookFromUser.Split(" - ");
-                if (parts.Length != 2 || string.IsNullOrWhiteSpace(parts[0]) || string.IsNullOrWhiteSpace(parts[1]))
-                    throw new FormatException("Invalid format! Title or Author missing.");
+            string[] parts = bookFromUser.Split(" - ");
+            if (parts.Length != 2 || string.IsNullOrWhiteSpace(parts[0]) || string.IsNullOrWhiteSpace(parts[1]))
+            {
+                Console.WriteLine("Invalid format! Title or Author missing.");
+            }
+                   
 
                 int newSize = books.Length + 1;
                 string[] newBooks = new string[newSize];
@@ -44,11 +49,7 @@ namespace BridgeLabzTraining.Scenario_oops.BookBuddy
                 books = newBooks;
 
                 Console.WriteLine("Book added successfully!");
-            }
-            catch (FormatException ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
+            
         }
 
 

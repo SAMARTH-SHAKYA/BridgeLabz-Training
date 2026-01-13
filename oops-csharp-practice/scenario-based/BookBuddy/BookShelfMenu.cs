@@ -16,7 +16,8 @@ namespace BridgeLabzTraining.Scenario_oops.BookBuddy
 
             bool isTrue = true;
 
-            ArrayList books = bookShelf.DatabaseFetch();
+            string[] books = bookShelf.DatabaseFetch();
+
 
 
             while (isTrue)
@@ -33,12 +34,12 @@ namespace BridgeLabzTraining.Scenario_oops.BookBuddy
                     case 1:
                         Console.WriteLine("Enter book in the format title - author ");
                         string book = Console.ReadLine();
-                        bookShelf.AddBook(books, book);
+                        bookShelf.AddBook(ref books, book);
                         bookShelf.ShowBooks(books);
                         break;
 
                     case 2:
-                        bookShelf.SortBooks(books);
+                        bookShelf.SortBooks(ref books);
                         bookShelf.ShowBooks(books);
                         break;
 
