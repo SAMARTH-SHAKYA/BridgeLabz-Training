@@ -290,3 +290,16 @@
 
 ### 🔮 Upcoming Learning
 - Tree
+
+## 📅 Day 18
+**Date:** 09-01-2026(Friday)
+### 📘 What I Learned
+- Linear Search
+- Binary Search
+  
+# 📝 Assignment for the Day
+- Scenario based question (version control)
+- Programming Linear search and binary search
+
+### 🔮 Upcoming Learning
+- String builder and exception handling
