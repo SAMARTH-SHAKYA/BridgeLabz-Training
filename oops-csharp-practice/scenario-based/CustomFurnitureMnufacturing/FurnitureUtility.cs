@@ -1,0 +1,77 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace BridgeLabzTraining.Scenario_oops.CustomFurnitureMnufacturing
+{
+    internal class FurnitureUtility : IFurniture
+    {
+        private Furniture furniture;
+        
+
+        public int MaxProfit(int n)
+        {
+            furniture = new Furniture();
+            int[] length = furniture.getLength();
+            int[] price = furniture.getPrice();
+
+            int[] dp = new int[n + 1];
+
+
+            //using dynamic programming for calcuating best prices
+            dp[0] = 0;
+
+            for (int i = 1; i <= n; i++)
+            {
+                int max = int.MinValue;
+
+                for (int j = 0; j < length.Length; j++)
+                {
+                    if (length[j] <= i)
+                    {
+                        max = Math.Max(max, price[j] + dp[i - length[j]]);
+                    }
+                }
+
+                dp[i] = max;
+            }
+
+            return dp[n];
+        }
+
+
+        private Furniture furniture1;
+        public int MaxProfitWithWaste(int n, int wasteAllowed)
+        {
+
+            furniture1 = new Furniture();
+            int[] length = furniture1.getLength();
+            int[] price = furniture1.getPrice();
+            int[] dp = new int[n + 1];
+
+            for (int i = 1; i <= n; i++)
+            {
+                int max = 0;
+
+                for (int j = 0; j < length.Length; j++)
+                {
+                    if (length[j] <= i)
+                    {
+                        max = Math.Max(max, price[j] + dp[i - length[j]]);
+                    }
+                }
+
+                dp[i] = max;
+            }
+
+            int bestProfit = 0;
+
+            for (int used = n - wasteAllowed; used <= n; used++)
+            {
+                bestProfit = Math.Max(bestProfit, dp[used]);
+            }
+
+            return bestProfit;
+        }
+    }
+}
