@@ -4,5 +4,5 @@ internal interface IAddress
     public void EditContact(Contacts contact);
     public void DeleteContact(Contacts contact);
     
-    public void NoDuplicate(Contacts contacts);
+    public bool NoDuplicate(Contacts[] contacts, int idx, Contacts newContact);
 }

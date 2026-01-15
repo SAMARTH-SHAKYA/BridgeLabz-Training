@@ -1,19 +1,19 @@
 internal class Contacts
 {
     //UC 01 : Created a Contact Class with the following properties.
-    public string FirstName {get; private set;}
-    public string LastName {get; private set;}
+    public string FirstName { get; private set; }
+    public string LastName { get; private set; }
 
-    public string Address {get; private set;}
+    public string Address { get; private set; }
 
-    public string City {get; private set;}
+    public string City { get; private set; }
 
-    public string State {get; private set;}
+    public string State { get; private set; }
 
-    public string Zip {get; private set;}
-    public string PhoneNumber {get; private set;}
+    public string Zip { get; private set; }
+    public string PhoneNumber { get; private set; }
 
-    public string Email {get; private set;}
+    public string Email { get; private set; }
 
     public Contacts(string firstName, string lastName, string address, string city, string state, string zip, string phoneNumber, string email)
     {
@@ -64,4 +64,30 @@ internal class Contacts
     {
         return $"Name: {FirstName} {LastName}, Address: {Address}, City: {City}, State: {State}, Zip: {Zip}, Phone: {PhoneNumber}, Email: {Email}";
     }
+
+    public override bool Equals(object obj)
+    {
+        if (obj == null || !(obj is Contacts))
+            return false;
+
+        Contacts other = (Contacts)obj;
+
+        return FirstName == other.FirstName &&
+               LastName == other.LastName &&
+               Address == other.Address &&
+               City == other.City &&
+               State == other.State &&
+               Zip == other.Zip &&
+               PhoneNumber == other.PhoneNumber &&
+               Email == other.Email;
+    }
+
+    public override int GetHashCode()
+    {
+        return 0; // simple and valid
+    }
+
+
+
+
 }

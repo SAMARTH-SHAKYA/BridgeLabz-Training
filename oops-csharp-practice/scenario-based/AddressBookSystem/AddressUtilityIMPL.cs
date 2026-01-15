@@ -1,4 +1,5 @@
 using System;
+using System.Diagnostics.Contracts;
 
 class AddressUtilityIMPL : IAddress
 {
@@ -24,8 +25,8 @@ class AddressUtilityIMPL : IAddress
         Console.Write("Enter Email: ");
         string email = Console.ReadLine();
         contact = new Contacts(firstName, lastName, address, city, state, zip, phoneNumber, email);
-        Console.WriteLine("Contact added successfully:");
-        Console.WriteLine(contact.ToString());
+
+        
         return contact;
     }
 
@@ -89,7 +90,7 @@ class AddressUtilityIMPL : IAddress
                 Console.WriteLine("Invalid choice.");
                 break;
         }
-        
+
     }
 
     //UC 04 : Ability to delete a contact person using their name.
@@ -99,15 +100,19 @@ class AddressUtilityIMPL : IAddress
     }
 
 
-    public void NoDuplicate(Contacts contacts)
+    //UC 07 : Ability to ensure there is no duplicate entry of the same person in a given address book.
+    public bool NoDuplicate(Contacts[] contacts, int idx, Contacts newContact)
     {
-        
-        for(int i = 0; i < 20; i++)
+        for (int i = 0; i < idx; i++)
         {
-            if(contacts != null && contacts.Equals(contacts))
+            if (contacts[i] != null && contacts[i].Equals(newContact))
             {
-                Console.WriteLine("Duplicate contact found.");
+                Console.WriteLine("Duplicate contact found:");
+                Console.WriteLine(contacts[i].ToString());
+                return false; // duplicate found
             }
         }
+        return true; // no duplicate
     }
 }
+
