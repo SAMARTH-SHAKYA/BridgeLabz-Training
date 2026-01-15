@@ -24,7 +24,40 @@ internal class Contacts
         this.State = state;
         this.Zip = zip;
         this.PhoneNumber = phoneNumber;
-        Email = email;
+        this.Email = email;
+    }
+    public void SetAddress(string address)
+    {
+        this.Address = address;
+    }
+    public void SetCity(string city)
+    {
+        this.City = city;
+    }
+    public void SetState(string state)
+    {
+        this.State = state;
+    }
+    public void SetZip(string zip)
+    {
+        this.Zip = zip;
+    }
+    public void SetPhoneNumber(string phoneNumber)
+    {
+        this.PhoneNumber = phoneNumber;
+    }
+    public void SetEmail(string email)
+    {
+        this.Email = email;
+    }
+    public void SetLastName(string lastName)
+    {
+        this.LastName = lastName;
+    }
+
+    public void SetFirstName(string firstName)
+    {
+        this.FirstName = firstName;
     }
 
     public override string ToString()
