@@ -91,4 +91,10 @@ class AddressUtilityIMPL : IAddress
         }
         
     }
+
+    //UC 04 : Ability to delete a contact person using their name.
+    public void DeleteContact(Contacts contact)
+    {
+        contact = null;
+    }
 }
