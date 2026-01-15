@@ -97,4 +97,17 @@ class AddressUtilityIMPL : IAddress
     {
         contact = null;
     }
+
+
+    public void NoDuplicate(Contacts contacts)
+    {
+        
+        for(int i = 0; i < 20; i++)
+        {
+            if(contacts != null && contacts.Equals(contacts))
+            {
+                Console.WriteLine("Duplicate contact found.");
+            }
+        }
+    }
 }

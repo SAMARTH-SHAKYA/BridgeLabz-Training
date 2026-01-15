@@ -5,13 +5,11 @@ class AddressMenu
 {
     private IAddress addressBook;
 
-    public void Menu()
+    public void Menu(AddressBook book)
     {
         addressBook = new AddressUtilityIMPL();
-        
-        Contacts[] contacts = new Contacts[10];
 
-        int idx = 0;
+
         bool isTrue = true;
 
         while (isTrue)
@@ -27,20 +25,20 @@ class AddressMenu
             switch (choice)
             {
                 case 1:
-                    contacts[idx] = addressBook.AddContact();
-                    idx++;
+                    book.contacts[book.AddressBookIdx] = addressBook.AddContact();
+                    book.AddressBookIdx++;
                     break;
 
                 case 2:
                     Console.WriteLine("Enter your first name to edit contact:");
                     string firstName = Console.ReadLine();
-                    for(int i = 0; i < idx; i++)
+                    for(int i = 0; i < book.AddressBookIdx; i++)
                     {
-                        if(contacts[i].FirstName.Equals(firstName))
+                        if(book.contacts[i].FirstName.Equals(firstName))
                         {
-                            addressBook.EditContact(contacts[i]);
+                            addressBook.EditContact(book.contacts[i]);
                             Console.WriteLine("Contact updated successfully:");
-                            Console.WriteLine(contacts[i].ToString());
+                            Console.WriteLine(book.contacts[i].ToString());
                             break;
                         }
                     }
@@ -49,21 +47,21 @@ class AddressMenu
                 case 3:
                     Console.WriteLine("Enter your first name to delete contact:");
                     string fname = Console.ReadLine();
-                    for(int i = 0; i < idx; i++)
+                    for(int i = 0; i < book.AddressBookIdx; i++)
                     {
-                        if(contacts[i].FirstName.Equals(fname))
+                        if(book.contacts[i].FirstName.Equals(fname))
                         {
-                            Console.WriteLine(contacts[i].ToString());
-                            addressBook.DeleteContact(contacts[i]);
+                            Console.WriteLine(book.contacts[i].ToString());
+                            addressBook.DeleteContact(book.contacts[i]);
                             Console.WriteLine("Contact deleted successfully.");
                             
                             // Shift contacts to fill the gap
-                            for(int j = i; j < idx - 1; j++)
+                            for(int j = i; j < book.AddressBookIdx - 1; j++)
                             {
-                                contacts[j] = contacts[j + 1];
+                                book.contacts[j] = book.contacts[j + 1];
                             }
-                            contacts[idx - 1] = null;
-                            idx--; 
+                            book.contacts[book.AddressBookIdx - 1] = null;
+                            book.AddressBookIdx--; 
                             break;
                         }
                     }
@@ -75,8 +73,8 @@ class AddressMenu
                     int n = Convert.ToInt32(Console.ReadLine());
                     for(int i = 0; i < n; i++)
                     {
-                        contacts[idx] = addressBook.AddContact();
-                        idx++;
+                        book.contacts[book.AddressBookIdx] = addressBook.AddContact();
+                        book.AddressBookIdx++;
                     }
                     break;
                 
