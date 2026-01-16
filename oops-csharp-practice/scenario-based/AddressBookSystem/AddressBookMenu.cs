@@ -6,6 +6,7 @@ public class AddressBookMenu
 
     public void Menu()
     {
+        //refactor to add multiple address book to the system
         addressBookUtility = new AddressBookIMPL();
         contactsUtility = new ContactsIMPL();
 
@@ -26,6 +27,7 @@ public class AddressBookMenu
             switch (choice)
             {
                 case 1:
+                    //each address book has a unique name
                     Console.WriteLine("Enter your address book name you want to add");
                     string name = Console.ReadLine();
                     for (int i = 0; i < AddressBookIndex; i++)
@@ -84,7 +86,7 @@ public class AddressBookMenu
                                         string userFirstName = Console.ReadLine();
                                         Console.WriteLine("Enter Last name");
                                         string userLastName = Console.ReadLine();
-
+                                        //ensuring that there is no duplicate entrt of the same person in a particular address book
                                         for (int j = 0; j < index; j++)
                                         {
                                             if (contactsArray[j] != null && contactsArray[j].FirstName == userFirstName && contactsArray[i].LastName == userLastName)
@@ -123,6 +125,8 @@ public class AddressBookMenu
                                         Console.WriteLine("Contact deleted");
                                         break;
 
+                                    
+                                    //ability to add multiple person to address book
                                     case 4:
                                         Console.WriteLine("Enter number of contacts");
                                         int numOfContacts = Convert.ToInt32(Console.ReadLine());

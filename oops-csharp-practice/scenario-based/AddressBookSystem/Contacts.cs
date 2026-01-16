@@ -1,6 +1,6 @@
 public class Contacts
 {
-    //UC 01 : Created a Contact Class with the following properties.
+    //Created a Contact Class with the following properties.
     public string FirstName { get; private set; }
     public string LastName { get; private set; }
 
@@ -15,6 +15,7 @@ public class Contacts
 
     public string Email { get; private set; }
 
+    //contructor of this class
     public Contacts(string firstName, string lastName, string address, string city, string state, string zip, string phoneNumber, string email)
     {
         this.FirstName = firstName;
@@ -26,6 +27,8 @@ public class Contacts
         this.PhoneNumber = phoneNumber;
         this.Email = email;
     }
+
+    //adding layers of setter 
     public void SetAddress(string address)
     {
         this.Address = address;
@@ -60,6 +63,7 @@ public class Contacts
         this.FirstName = firstName;
     }
 
+    //overriding to string method 
     public override string ToString()
     {
         return $"Name: {FirstName} {LastName}, Address: {Address}, City: {City}, State: {State}, Zip: {Zip}, Phone: {PhoneNumber}, Email: {Email}";

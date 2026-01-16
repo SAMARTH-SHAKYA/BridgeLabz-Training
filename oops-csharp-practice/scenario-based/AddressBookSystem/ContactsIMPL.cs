@@ -2,6 +2,8 @@ using System;
 public class ContactsIMPL : IContacts
 {
     private Contacts contacts;
+
+    //added a method to add contacts to the contacts array
     public Contacts AddContact(string firstName,string lastName)
     {
         Console.Write("Enter Address: ");
@@ -23,6 +25,7 @@ public class ContactsIMPL : IContacts
     }
 
 
+    //this method will return the index which you want from the firstname
     public int FindContactIndex(Contacts[] contactArray, string firstName, int index)
     {
         for (int i = 0; i < index; i++)
@@ -35,6 +38,7 @@ public class ContactsIMPL : IContacts
         return -1;
     }
 
+    //method to delete contact from the contacts array
     public Contacts[] DeleteContact(string firstName,Contacts[] contactArray,int index)
     {
         int idx = FindContactIndex(contactArray,firstName,index);
@@ -47,7 +51,7 @@ public class ContactsIMPL : IContacts
         return contactArray;
     }
 
-
+    //method to editcontacts in the contact array
     public Contacts EditContacts(Contacts contactToEdit)
     {
         contacts = contactToEdit;
