@@ -1,4 +1,4 @@
-internal class Contacts
+public class Contacts
 {
     //UC 01 : Created a Contact Class with the following properties.
     public string FirstName { get; private set; }
