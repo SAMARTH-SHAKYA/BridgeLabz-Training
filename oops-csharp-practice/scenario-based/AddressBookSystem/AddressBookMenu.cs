@@ -21,6 +21,7 @@ public class AddressBookMenu
             Console.WriteLine("Press 1 : To Add New Address Book");
             Console.WriteLine("Press 2 : To open Address Book");
             Console.WriteLine("Press 3 : To check person across city ");
+            Console.WriteLine("Press 4 : Veiw persons by city");
             Console.WriteLine("Press 2 : Exit");
 
             int choice = Convert.ToInt32(Console.ReadLine());
@@ -202,6 +203,11 @@ public class AddressBookMenu
                     addressBookUtility.SearchPersonByCity(addressBookDatabase, AddressBookIndex, cityName);
                     break;
 
+
+                //ability to view persons by city or state
+                case 4:
+                    addressBookUtility.ViewPersonsByCity(addressBookDatabase, AddressBookIndex);
+                    break;
 
                 case 5:
                     isTrue = false;
