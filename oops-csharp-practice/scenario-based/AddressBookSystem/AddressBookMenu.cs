@@ -20,6 +20,7 @@ public class AddressBookMenu
         {
             Console.WriteLine("Press 1 : To Add New Address Book");
             Console.WriteLine("Press 2 : To open Address Book");
+            Console.WriteLine("Press 3 : To check person across city ");
             Console.WriteLine("Press 2 : Exit");
 
             int choice = Convert.ToInt32(Console.ReadLine());
@@ -125,7 +126,7 @@ public class AddressBookMenu
                                         Console.WriteLine("Contact deleted");
                                         break;
 
-                                    
+
                                     //ability to add multiple person to address book
                                     case 4:
                                         Console.WriteLine("Enter number of contacts");
@@ -192,6 +193,14 @@ public class AddressBookMenu
 
                     break;
 
+
+                //check a person in every address book for a city
+                case 3:
+                    Console.WriteLine("Enter city name:");
+                    string cityName = Console.ReadLine();
+
+                    addressBookUtility.SearchPersonByCity(addressBookDatabase, AddressBookIndex, cityName);
+                    break;
 
 
                 case 5:
