@@ -18,16 +18,25 @@ public class AddressBookMenu
 
         while (isTrue)
         {
+            Console.WriteLine("Press 0 : To Exit");
             Console.WriteLine("Press 1 : To Add New Address Book");
             Console.WriteLine("Press 2 : To open Address Book");
             Console.WriteLine("Press 3 : To check person across city ");
             Console.WriteLine("Press 4 : Veiw persons by city");
-            Console.WriteLine("Press 2 : Exit");
+            Console.WriteLine("Press 5 : Count persons by city");
+            Console.WriteLine("Press 6 : Count persons by state");
+
 
             int choice = Convert.ToInt32(Console.ReadLine());
 
             switch (choice)
             {
+
+                case 0:
+                    isTrue = false;
+                    Console.WriteLine("Current Adress Book Closed");
+                    break;
+
                 case 1:
                     //each address book has a unique name
                     Console.WriteLine("Enter your address book name you want to add");
@@ -209,9 +218,13 @@ public class AddressBookMenu
                     addressBookUtility.ViewPersonsByCity(addressBookDatabase, AddressBookIndex);
                     break;
 
+
                 case 5:
-                    isTrue = false;
-                    Console.WriteLine("Current Adress Book Closed");
+                    addressBookUtility.CountByCity(addressBookDatabase, AddressBookIndex);
+                    break;
+
+                case 6:
+                    addressBookUtility.CountByState(addressBookDatabase, AddressBookIndex);
                     break;
 
 

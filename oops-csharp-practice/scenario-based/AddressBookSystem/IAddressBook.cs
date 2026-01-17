@@ -6,4 +6,8 @@ public interface IAddressBook
 
     void ViewPersonsByCity(AddressBook[] addressBooks, int count);
 
+    void CountByCity(AddressBook[] addressBooks, int count);
+    
+    void CountByState(AddressBook[] addressBooks, int count);
+
 }
