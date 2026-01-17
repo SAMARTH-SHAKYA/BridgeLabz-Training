@@ -25,6 +25,7 @@ public class AddressBookMenu
             Console.WriteLine("Press 4 : Veiw persons by city");
             Console.WriteLine("Press 5 : Count persons by city");
             Console.WriteLine("Press 6 : Count persons by state");
+            Console.WriteLine("Press 7 : Sort contacts alphabetically");
 
 
             int choice = Convert.ToInt32(Console.ReadLine());
@@ -219,6 +220,7 @@ public class AddressBookMenu
                     break;
 
 
+                //ability to get number of contact persons
                 case 5:
                     addressBookUtility.CountByCity(addressBookDatabase, AddressBookIndex);
                     break;
@@ -227,6 +229,31 @@ public class AddressBookMenu
                     addressBookUtility.CountByState(addressBookDatabase, AddressBookIndex);
                     break;
 
+                
+                case 7:
+                    Console.WriteLine("Enter address book name to sort:");
+                    string sortBookName = Console.ReadLine();
+
+                    bool sortFound = false;
+
+                    for (int i = 0; i < AddressBookIndex; i++)
+                    {
+                        if (addressBookDatabase[i].AddressBookName == sortBookName)
+                        {
+                            addressBookDatabase[i] =
+                                addressBookUtility.SortContactsByName(addressBookDatabase[i]);
+
+                            Console.WriteLine("Contacts sorted successfully!");
+                            sortFound = true;
+                            break;
+                        }
+                    }
+
+                    if (!sortFound)
+                    {
+                        Console.WriteLine("Address Book not found.");
+                    }
+                    break;
 
                 default:
                     Console.WriteLine("Invalid input");

@@ -36,7 +36,7 @@ public class AddressBookIMPL : IAddressBook
         }
     }
 
-
+    //Ability to view Persons by City or State
     public void ViewPersonsByCity(AddressBook[] addressBooks, int count)
     {
         string[] printedCities = new string[100];
@@ -96,6 +96,7 @@ public class AddressBookIMPL : IAddressBook
         }
     }
 
+    //ability to get number of contact persons
     public void CountByCity(AddressBook[] addressBooks, int count)
     {
         string[] cities = new string[100];
@@ -188,6 +189,34 @@ public class AddressBookIMPL : IAddressBook
 
         if (stateIndex == 0)
             Console.WriteLine("No contacts found.");
+    }
+
+
+    //Ability to get number of contact persons i.e. count by City or State - Search Result
+    public AddressBook SortContactsByName(AddressBook book)
+    {
+        Contacts[] contacts = book.contacts;
+
+        int n = 0;
+        while (n < contacts.Length && contacts[n] != null)
+            n++;
+
+        // Bubble Sort (Alphabetical by First Name)
+        for (int i = 0; i < n - 1; i++)
+        {
+            for (int j = 0; j < n - i - 1; j++)
+            {
+                if (string.Compare(contacts[j].FirstName, contacts[j + 1].FirstName, true) > 0)
+                {
+                    Contacts temp = contacts[j];
+                    contacts[j] = contacts[j + 1];
+                    contacts[j + 1] = temp;
+                }
+            }
+        }
+
+        book.SetContacts(contacts);
+        return book;
     }
 
 
