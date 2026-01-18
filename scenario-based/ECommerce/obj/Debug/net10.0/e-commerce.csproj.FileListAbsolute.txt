@@ -1,0 +1,14 @@
+D:\BridgeLabzTraining(VS code)\dsa-csharp-practice\scenario-based\e-commerce\bin\Debug\net10.0\e-commerce.exe
+D:\BridgeLabzTraining(VS code)\dsa-csharp-practice\scenario-based\e-commerce\bin\Debug\net10.0\e-commerce.deps.json
+D:\BridgeLabzTraining(VS code)\dsa-csharp-practice\scenario-based\e-commerce\bin\Debug\net10.0\e-commerce.runtimeconfig.json
+D:\BridgeLabzTraining(VS code)\dsa-csharp-practice\scenario-based\e-commerce\bin\Debug\net10.0\e-commerce.dll
+D:\BridgeLabzTraining(VS code)\dsa-csharp-practice\scenario-based\e-commerce\bin\Debug\net10.0\e-commerce.pdb
+D:\BridgeLabzTraining(VS code)\dsa-csharp-practice\scenario-based\e-commerce\obj\Debug\net10.0\e-commerce.GeneratedMSBuildEditorConfig.editorconfig
+D:\BridgeLabzTraining(VS code)\dsa-csharp-practice\scenario-based\e-commerce\obj\Debug\net10.0\e-commerce.AssemblyInfoInputs.cache
+D:\BridgeLabzTraining(VS code)\dsa-csharp-practice\scenario-based\e-commerce\obj\Debug\net10.0\e-commerce.AssemblyInfo.cs
+D:\BridgeLabzTraining(VS code)\dsa-csharp-practice\scenario-based\e-commerce\obj\Debug\net10.0\e-commerce.csproj.CoreCompileInputs.cache
+D:\BridgeLabzTraining(VS code)\dsa-csharp-practice\scenario-based\e-commerce\obj\Debug\net10.0\e-commerce.dll
+D:\BridgeLabzTraining(VS code)\dsa-csharp-practice\scenario-based\e-commerce\obj\Debug\net10.0\refint\e-commerce.dll
+D:\BridgeLabzTraining(VS code)\dsa-csharp-practice\scenario-based\e-commerce\obj\Debug\net10.0\e-commerce.pdb
+D:\BridgeLabzTraining(VS code)\dsa-csharp-practice\scenario-based\e-commerce\obj\Debug\net10.0\e-commerce.genruntimeconfig.cache
+D:\BridgeLabzTraining(VS code)\dsa-csharp-practice\scenario-based\e-commerce\obj\Debug\net10.0\ref\e-commerce.dll
