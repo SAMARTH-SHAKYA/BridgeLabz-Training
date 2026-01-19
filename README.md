@@ -291,6 +291,8 @@
 ### 🔮 Upcoming Learning
 - Tree
 
+
+--------
 ## 📅 Day 18
 **Date:** 09-01-2026(Friday)
 ### 📘 What I Learned
@@ -303,3 +305,84 @@
 
 ### 🔮 Upcoming Learning
 - String builder and exception handling
+
+--------
+## 📅 Day 19
+**Date:** 12-01-2026(Monday)
+### 📘 What I Learned
+- Revision of pervious concepts
+  
+# 📝 Assignment for the Day
+- Scenario based question (version control)
+- Programming Linear search and binary search
+
+### 🔮 Upcoming Learning
+- Algorithm's Runtime Analysis & Big-O Notation
+
+
+--------
+## 📅 Day 20
+**Date:** 13-01-2026(Tuesday)
+### 📘 What I Learned
+- Algorithm's Runtime Analysis & Big-O Notation
+  
+# 📝 Assignment for the Day
+- Scenario based question 
+- Book Buddy (digital bookshelf app)
+
+### 🔮 Upcoming Learning
+- Collections
+
+--------
+## 📅 Day 21
+**Date:** 14-01-2026(Wednsday)
+### 📘 What I Learned
+-Revision of pervious concepts
+  
+# 📝 Assignment for the Day
+- Scenario based question 
+- Programming questions on Algorithm's Runtime Analysis & Big-O Notation
+
+### 🔮 Upcoming Learning
+- Collections
+
+--------
+## 📅 Day 22
+**Date:** 15-01-2026(ThrusDay)
+### 📘 What I Learned
+-Revision of pervious concepts
+  
+# 📝 Assignment for the Day
+- Scenario based question (browser buddy)
+- Address book problem 
+
+### 🔮 Upcoming Learning
+- Collections
+
+
+--------
+## 📅 Day 23
+**Date:** 16-01-2026(Friday)
+### 📘 What I Learned
+-Revision of pervious concepts
+  
+# 📝 Assignment for the Day
+- Scenario based question 
+- Continuation of Address book problem 
+
+### 🔮 Upcoming Learning
+- Collections
+
+--------
+## 📅 Day 24
+**Date:** 16-01-2026(Saturday)
+### 📘 What I Learned
+- When to use which sorting algorithm
+  
+# 📝 Assignment for the Day
+- Scenario based question 
+- Continuation of Address book problem 
+
+### 🔮 Upcoming Learning
+- Collections
+
