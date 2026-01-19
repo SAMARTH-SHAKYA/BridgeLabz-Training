@@ -375,7 +375,7 @@
 
 --------
 ## 📅 Day 24
-**Date:** 16-01-2026(Saturday)
+**Date:** 17-01-2026(Saturday)
 ### 📘 What I Learned
 - When to use which sorting algorithm
   
