@@ -1,0 +1,14 @@
+D:\BridgeLabzTraining(VS code)\dsa-csharp-practice\scenario-based\edu-results\obj\Debug\net10.0\edu-results.GeneratedMSBuildEditorConfig.editorconfig
+D:\BridgeLabzTraining(VS code)\dsa-csharp-practice\scenario-based\edu-results\obj\Debug\net10.0\edu-results.AssemblyInfoInputs.cache
+D:\BridgeLabzTraining(VS code)\dsa-csharp-practice\scenario-based\edu-results\obj\Debug\net10.0\edu-results.AssemblyInfo.cs
+D:\BridgeLabzTraining(VS code)\dsa-csharp-practice\scenario-based\edu-results\obj\Debug\net10.0\edu-results.csproj.CoreCompileInputs.cache
+D:\BridgeLabzTraining(VS code)\dsa-csharp-practice\scenario-based\edu-results\bin\Debug\net10.0\edu-results.exe
+D:\BridgeLabzTraining(VS code)\dsa-csharp-practice\scenario-based\edu-results\bin\Debug\net10.0\edu-results.deps.json
+D:\BridgeLabzTraining(VS code)\dsa-csharp-practice\scenario-based\edu-results\bin\Debug\net10.0\edu-results.runtimeconfig.json
+D:\BridgeLabzTraining(VS code)\dsa-csharp-practice\scenario-based\edu-results\bin\Debug\net10.0\edu-results.dll
+D:\BridgeLabzTraining(VS code)\dsa-csharp-practice\scenario-based\edu-results\bin\Debug\net10.0\edu-results.pdb
+D:\BridgeLabzTraining(VS code)\dsa-csharp-practice\scenario-based\edu-results\obj\Debug\net10.0\edu-results.dll
+D:\BridgeLabzTraining(VS code)\dsa-csharp-practice\scenario-based\edu-results\obj\Debug\net10.0\refint\edu-results.dll
+D:\BridgeLabzTraining(VS code)\dsa-csharp-practice\scenario-based\edu-results\obj\Debug\net10.0\edu-results.pdb
+D:\BridgeLabzTraining(VS code)\dsa-csharp-practice\scenario-based\edu-results\obj\Debug\net10.0\edu-results.genruntimeconfig.cache
+D:\BridgeLabzTraining(VS code)\dsa-csharp-practice\scenario-based\edu-results\obj\Debug\net10.0\ref\edu-results.dll
