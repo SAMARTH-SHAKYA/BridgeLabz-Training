@@ -386,3 +386,93 @@
 ### 🔮 Upcoming Learning
 - Collections
 
+--------
+## 📅 Day 25
+**Date:** 19-01-2026(Monday)
+### 📘 What I Learned
+- Generics
+  
+# 📝 Assignment for the Day
+- Parcel Tracker (using singly linked list)
+- Exam Proctor (stack + hashmap + functions)
+- Generics assignment
+
+### 🔮 Upcoming Learning
+- Collections
+
+--------
+## 📅 Day 26
+**Date:** 20-01-2026(Tuesday)
+### 📘 What I Learned
+- Collections
+  
+# 📝 Assignment for the Day
+- Sorting adhar numbers (count sort)
+- Password cracker simulator (backtracking)
+- Collections assignment
+
+### 🔮 Upcoming Learning
+- Streams
+
+
+--------
+## 📅 Day 27
+**Date:** 21-01-2026(Wednesday)
+### 📘 What I Learned
+- Streams
+  
+# 📝 Assignment for the Day
+- Stream assginment
+- Rank Sheet generator (Merge sort)
+- Supermarket billing queue (Queue + hashmap)
+
+### 🔮 Upcoming Learning
+- Exception Handling
+
+--------
+## 📅 Day 28
+**Date:** 22-01-2026(Thrusday)
+### 📘 What I Learned
+- Exception handling
+- Custom exceptions
+- Non generic collections and legacy collections
+  
+# 📝 Assignment for the Day
+- Exception assginment
+- Ambulance Route (Circular linked list)
+
+### 🔮 Upcoming Learning
+- Regex and Nunit
+
+
+--------
+## 📅 Day 29
+**Date:** 23-01-2026(Friday)
+### 📘 What I Learned
+- Regex
+- Nunit
+  
+# 📝 Assignment for the Day
+- Regex and NUnit assginment
+- Address Book Extended
+
+### 🔮 Upcoming Learning
+- Annotations and reflections
+
+
+--------
+## 📅 Day 30
+**Date:** 27-01-2026(Monay)
+### 📘 What I Learned
+- Annotations
+- Reflections
+- Code coverage
+  
+# 📝 Assignment for the Day
+- Annotation and reflection  assginment
+- Health check pro
+- Event Tracker (annotations + reflections + JSON)
+
+### 🔮 Upcoming Learning
+- SOLID principles
+
