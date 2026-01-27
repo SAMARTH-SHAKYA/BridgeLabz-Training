@@ -299,7 +299,7 @@
 - Linear Search
 - Binary Search
   
-# 📝 Assignment for the Day
+### 📝 Assignment for the Day
 - Scenario based question (version control)
 - Programming Linear search and binary search
 
@@ -312,7 +312,7 @@
 ### 📘 What I Learned
 - Revision of pervious concepts
   
-# 📝 Assignment for the Day
+### 📝 Assignment for the Day
 - Scenario based question (version control)
 - Programming Linear search and binary search
 
@@ -326,7 +326,7 @@
 ### 📘 What I Learned
 - Algorithm's Runtime Analysis & Big-O Notation
   
-# 📝 Assignment for the Day
+### 📝 Assignment for the Day
 - Scenario based question 
 - Book Buddy (digital bookshelf app)
 
@@ -339,7 +339,7 @@
 ### 📘 What I Learned
 -Revision of pervious concepts
   
-# 📝 Assignment for the Day
+### 📝 Assignment for the Day
 - Scenario based question 
 - Programming questions on Algorithm's Runtime Analysis & Big-O Notation
 
@@ -352,7 +352,7 @@
 ### 📘 What I Learned
 -Revision of pervious concepts
   
-# 📝 Assignment for the Day
+### 📝 Assignment for the Day
 - Scenario based question (browser buddy)
 - Address book problem 
 
@@ -366,7 +366,7 @@
 ### 📘 What I Learned
 -Revision of pervious concepts
   
-# 📝 Assignment for the Day
+### 📝 Assignment for the Day
 - Scenario based question 
 - Continuation of Address book problem 
 
@@ -379,7 +379,7 @@
 ### 📘 What I Learned
 - When to use which sorting algorithm
   
-# 📝 Assignment for the Day
+### 📝 Assignment for the Day
 - Scenario based question 
 - Continuation of Address book problem 
 
@@ -392,7 +392,7 @@
 ### 📘 What I Learned
 - Generics
   
-# 📝 Assignment for the Day
+### 📝 Assignment for the Day
 - Parcel Tracker (using singly linked list)
 - Exam Proctor (stack + hashmap + functions)
 - Generics assignment
@@ -406,7 +406,7 @@
 ### 📘 What I Learned
 - Collections
   
-# 📝 Assignment for the Day
+### 📝 Assignment for the Day
 - Sorting adhar numbers (count sort)
 - Password cracker simulator (backtracking)
 - Collections assignment
@@ -421,7 +421,7 @@
 ### 📘 What I Learned
 - Streams
   
-# 📝 Assignment for the Day
+### 📝 Assignment for the Day
 - Stream assginment
 - Rank Sheet generator (Merge sort)
 - Supermarket billing queue (Queue + hashmap)
@@ -437,7 +437,7 @@
 - Custom exceptions
 - Non generic collections and legacy collections
   
-# 📝 Assignment for the Day
+### 📝 Assignment for the Day
 - Exception assginment
 - Ambulance Route (Circular linked list)
 
@@ -452,7 +452,7 @@
 - Regex
 - Nunit
   
-# 📝 Assignment for the Day
+### 📝 Assignment for the Day
 - Regex and NUnit assginment
 - Address Book Extended
 
@@ -468,7 +468,7 @@
 - Reflections
 - Code coverage
   
-# 📝 Assignment for the Day
+### 📝 Assignment for the Day
 - Annotation and reflection  assginment
 - Health check pro
 - Event Tracker (annotations + reflections + JSON)
