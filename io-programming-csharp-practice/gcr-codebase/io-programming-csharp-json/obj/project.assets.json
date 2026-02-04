@@ -96,23 +96,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\dell\\.nuget\\packages\\": {},
+    "C:\\Users\\samar\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\dell\\Documents\\web dev study\\JsonAssignment\\JsonAssignment\\JsonAssignment.csproj",
+      "projectUniqueName": "C:\\Users\\samar\\OneDrive\\Desktop\\BridgeLabz-Training\\io-programming-csharp-practice\\gcr-codebase\\io-programming-csharp-json\\JsonAssignment.csproj",
       "projectName": "JsonAssignment",
-      "projectPath": "C:\\Users\\dell\\Documents\\web dev study\\JsonAssignment\\JsonAssignment\\JsonAssignment.csproj",
-      "packagesPath": "C:\\Users\\dell\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\dell\\Documents\\web dev study\\JsonAssignment\\JsonAssignment\\obj\\",
+      "projectPath": "C:\\Users\\samar\\OneDrive\\Desktop\\BridgeLabz-Training\\io-programming-csharp-practice\\gcr-codebase\\io-programming-csharp-json\\JsonAssignment.csproj",
+      "packagesPath": "C:\\Users\\samar\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\samar\\OneDrive\\Desktop\\BridgeLabz-Training\\io-programming-csharp-practice\\gcr-codebase\\io-programming-csharp-json\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\dell\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\samar\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -166,6 +166,24 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[8.0.23, 8.0.23]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Host.win-x64",
+            "version": "[8.0.23, 8.0.23]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[8.0.23, 8.0.23]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[8.0.23, 8.0.23]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
