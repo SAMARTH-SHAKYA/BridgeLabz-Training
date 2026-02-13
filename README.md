@@ -476,3 +476,209 @@
 ### 🔮 Upcoming Learning
 - SOLID principles
 
+
+--------
+## 📅 Day 31
+**Date:** 28-01-2026(Tuesday)
+### 📘 What I Learned
+- CSV data handling
+- Reading, Writing and Mapping
+  
+### 📝 Assignment for the Day
+- CSV data handling assginment
+- AeroVigil(Scenario based problem) and Validations on Bank Account(Regex scenario based)
+
+### 🔮 Upcoming Learning
+- SOLID principles
+
+--------
+## 📅 Day 32
+**Date:** 29-01-2026(Wednesday)
+### 📘 What I Learned
+- JSON data
+- JSON serialization,deserialization and reading/writing into files
+  
+### 📝 Assignment for the Day
+- JSON data assginment
+- Stream buzz(dictionary + oops)
+- Ocean Fleet(scenario based problem)
+
+### 🔮 Upcoming Learning
+- SOLID principles
+
+--------
+## 📅 Day 33
+**Date:** 30-01-2026(Thrusday)
+### 📘 What I Learned
+- In-depth revision of previously learned concepts
+  
+### 📝 Assignment for the Day
+- Lexical Twist(scenario based problem)
+- Future Logistics (scenario based problem)
+
+### 🔮 Upcoming Learning
+- SOLID principles
+
+--------
+## 📅 Day 34
+**Date:** 31-01-2026(Friday)
+### 📘 What I Learned
+- In-depth revision of previously learned concepts
+  
+### 📝 Assignment for the Day
+- Lexical Twist(scenario based problem)
+- Future Logistics (scenario based problem)
+
+### 🔮 Upcoming Learning
+- SOLID principles
+
+--------
+## 📅 Day 35
+**Date:** 02-02-2026(Monday)
+### 📘 What I Learned
+- In-depth revision of previously learned concepts
+- Design Principles
+  
+### 📝 Assignment for the Day
+- More scenario based probelems
+
+### 🔮 Upcoming Learning
+- Design Patterns
+
+
+--------
+## 📅 Day 36
+**Date:** 03-02-2026(Tuesday)
+### 📘 What I Learned
+- In-depth revision of previously learned concepts
+- Design Principles
+- Design Patterns
+  
+### 📝 Assignment for the Day
+- More scenario based probelems
+- Flip key logical
+
+### 🔮 Upcoming Learning
+- Multi-threading
+
+--------
+## 📅 Day 37
+**Date:** 04-02-2026(Wednesday)
+### 📘 What I Learned
+- Multi threading
+- Creating and managing threads
+  
+### 📝 Assignment for the Day
+- Factory Robot Hazard Problem
+- Multi threading assignment
+
+### 🔮 Upcoming Learning
+- Multi-threading
+
+
+--------
+## 📅 Day 38
+**Date:** 05-02-2026(Thrusday)
+### 📘 What I Learned
+- Multi threading
+- Syncronization and Asyncronization
+  
+### 📝 Assignment for the Day
+- Address book continuation
+
+### 🔮 Upcoming Learning
+- Database management system
+
+--------
+## 📅 Day 39
+**Date:** 06-02-2026(Friday)
+### 📘 What I Learned
+- RDBMS
+- Normalization
+- Basic SQL Commands(DDL,DML)
+  
+### 📝 Assignment for the Day
+- Address book continuation
+- Basic Sql Commands 
+
+### 🔮 Upcoming Learning
+- Joins
+
+--------
+## 📅 Day 40
+**Date:** 07-02-2026(Saturday)
+### 📘 What I Learned
+- Sql joins
+- Constraints DQL,DCL and TCL
+  
+### 📝 Assignment for the Day
+- SQL commands practice
+
+### 🔮 Upcoming Learning
+- Filtering and sorting
+
+
+--------
+## 📅 Day 41
+**Date:** 09-02-2026(Monday)
+### 📘 What I Learned
+- Filtering and Sorting
+- Aggregate Functions
+- Subqueries and indexing
+  
+### 📝 Assignment for the Day
+- SQL commands practice
+
+### 🔮 Upcoming Learning
+- Stored procedures
+
+
+
+--------
+## 📅 Day 42
+**Date:** 10-02-2026(Tuesday)
+### 📘 What I Learned
+- Stored Procedures
+- Triggers
+- Views
+
+### 📝 Assignment for the Day
+- SQL commands practice
+
+### 🔮 Upcoming Learning
+- ADO .NET
+
+
+--------
+## 📅 Day 43
+**Date:** 11-02-2026(Wednesday)
+### 📘 What I Learned
+- In-depth revision of previously learned concepts
+
+### 📝 Assignment for the Day
+- SQL commands practice
+- Creating a database for a console application
+
+### 🔮 Upcoming Learning
+- ADO .NET
+
+--------
+## 📅 Day 44
+**Date:** 12-02-2026(Thrusday)
+### 📘 What I Learned
+- In-depth revision of previously learned concepts
+
+### 📝 Assignment for the Day
+- SQL commands practice
+- Creating a database for a console application(Health care)
+
+### 🔮 Upcoming Learning
+- ADO .NET
+
+
+
+  
+
+
+
+
