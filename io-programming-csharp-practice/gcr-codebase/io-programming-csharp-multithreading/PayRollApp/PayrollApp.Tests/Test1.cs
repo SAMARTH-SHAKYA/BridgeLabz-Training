@@ -34,10 +34,26 @@ namespace PayrollApp.Tests
 
             List<Employee> employees = new List<Employee>
                 {
-                    new Employee { Name="Emp1", Salary=50000, StartDate=DateTime.Now },
-                    new Employee { Name="Emp2", Salary=60000, StartDate=DateTime.Now },
-                    new Employee { Name="Emp3", Salary=70000, StartDate=DateTime.Now },
-                    new Employee { Name="Emp4", Salary=80000, StartDate=DateTime.Now }
+                    new Employee {
+                        Name="Emp1", Salary=50000, StartDate=DateTime.Now,
+                        BasicPay=40000, Deductions=2000,
+                        TaxablePay=38000, IncomeTax=3000, NetPay=35000
+                    },
+                    new Employee {
+                        Name="Emp2", Salary=60000, StartDate=DateTime.Now,
+                        BasicPay=48000, Deductions=3000,
+                        TaxablePay=45000, IncomeTax=4000, NetPay=41000
+                    },
+                    new Employee {
+                        Name="Emp3", Salary=70000, StartDate=DateTime.Now,
+                        BasicPay=56000, Deductions=4000,
+                        TaxablePay=52000, IncomeTax=5000, NetPay=47000
+                    },
+                    new Employee {
+                        Name="Emp4", Salary=80000, StartDate=DateTime.Now,
+                        BasicPay=65000, Deductions=5000,
+                        TaxablePay=60000, IncomeTax=6000, NetPay=54000
+                    }
                 };
 
             long normalTime = service.AddEmployeesWithoutThread(employees);
@@ -58,12 +74,28 @@ namespace PayrollApp.Tests
             PayrollService service = new PayrollService();
 
             List<Employee> employees = new List<Employee>
-                {
-                    new Employee { Name="E1", Salary=50000, StartDate=DateTime.Now },
-                    new Employee { Name="E2", Salary=60000, StartDate=DateTime.Now },
-                    new Employee { Name="E3", Salary=70000, StartDate=DateTime.Now },
-                    new Employee { Name="E4", Salary=80000, StartDate=DateTime.Now }
-                };
+                    {
+                        new Employee {
+                            Name="Emp1", Salary=50000, StartDate=DateTime.Now,
+                            BasicPay=40000, Deductions=2000,
+                            TaxablePay=38000, IncomeTax=3000, NetPay=35000
+                        },
+                        new Employee {
+                            Name="Emp2", Salary=60000, StartDate=DateTime.Now,
+                            BasicPay=48000, Deductions=3000,
+                            TaxablePay=45000, IncomeTax=4000, NetPay=41000
+                        },
+                        new Employee {
+                            Name="Emp3", Salary=70000, StartDate=DateTime.Now,
+                            BasicPay=56000, Deductions=4000,
+                            TaxablePay=52000, IncomeTax=5000, NetPay=47000
+                        },
+                        new Employee {
+                            Name="Emp4", Salary=80000, StartDate=DateTime.Now,
+                            BasicPay=65000, Deductions=5000,
+                            TaxablePay=60000, IncomeTax=6000, NetPay=54000
+                        }
+                    };
 
             service.ResetCounter();
 
@@ -91,10 +123,26 @@ namespace PayrollApp.Tests
 
             List<Employee> employees = new List<Employee>
                     {
-                        new Employee { Name="Emp1", Salary=50000, StartDate=DateTime.Now },
-                        new Employee { Name="Emp2", Salary=60000, StartDate=DateTime.Now },
-                        new Employee { Name="Emp3", Salary=70000, StartDate=DateTime.Now },
-                        new Employee { Name="Emp4", Salary=80000, StartDate=DateTime.Now }
+                        new Employee {
+                            Name="Emp1", Salary=50000, StartDate=DateTime.Now,
+                            BasicPay=40000, Deductions=2000,
+                            TaxablePay=38000, IncomeTax=3000, NetPay=35000
+                        },
+                        new Employee {
+                            Name="Emp2", Salary=60000, StartDate=DateTime.Now,
+                            BasicPay=48000, Deductions=3000,
+                            TaxablePay=45000, IncomeTax=4000, NetPay=41000
+                        },
+                        new Employee {
+                            Name="Emp3", Salary=70000, StartDate=DateTime.Now,
+                            BasicPay=56000, Deductions=4000,
+                            TaxablePay=52000, IncomeTax=5000, NetPay=47000
+                        },
+                        new Employee {
+                            Name="Emp4", Salary=80000, StartDate=DateTime.Now,
+                            BasicPay=65000, Deductions=5000,
+                            TaxablePay=60000, IncomeTax=6000, NetPay=54000
+                        }
                     };
 
             long normalTime = service.AddEmployeesWithoutThread(employees);

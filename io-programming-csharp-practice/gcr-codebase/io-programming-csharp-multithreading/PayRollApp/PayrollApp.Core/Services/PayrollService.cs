@@ -65,13 +65,10 @@ namespace PayrollApp.Core.Services
 
             foreach (var emp in employees)
             {
-                Console.WriteLine($"Main Thread {Thread.CurrentThread.ManagedThreadId} processing {emp.Name}");
-                AddEmployee(emp);
+                AddEmployeeToPayroll(emp);
             }
 
             stopwatch.Stop();
-            Console.WriteLine($"Total Time (Without Thread): {stopwatch.ElapsedMilliseconds} ms");
-
             return stopwatch.ElapsedMilliseconds;
         }
 
@@ -87,7 +84,7 @@ namespace PayrollApp.Core.Services
                 Thread thread = new Thread(() =>
                 {
                     Console.WriteLine($"Thread {Thread.CurrentThread.ManagedThreadId} STARTED for {emp.Name}");
-                    AddEmployee(emp);
+                    AddEmployeeToPayroll(emp);
                     Console.WriteLine($"Thread {Thread.CurrentThread.ManagedThreadId} COMPLETED for {emp.Name}");
                 });
 
@@ -96,41 +93,64 @@ namespace PayrollApp.Core.Services
             }
 
             foreach (var thread in threads)
-            {
                 thread.Join();
-            }
 
             stopwatch.Stop();
-            Console.WriteLine($"Total Time (With Thread): {stopwatch.ElapsedMilliseconds} ms");
-
             return stopwatch.ElapsedMilliseconds;
         }
 
 
-        private void AddEmployee(Employee emp)
+        private void AddEmployeeToPayroll(Employee emp)
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
-
-                // Synchronization using lock
-                lock (lockObject)
+                Interlocked.Increment(ref connectionCounter);
+                using (SqlTransaction transaction = connection.BeginTransaction())
                 {
-                    connectionCounter++;
-                    Console.WriteLine($"Connection Count: {connectionCounter}");
-                }
+                    try
+                    {
+                        // Insert into employee_payroll
+                        string employeeQuery = @"
+                    INSERT INTO employee_payroll (Name, Salary, StartDate)
+                    VALUES (@Name, @Salary, @StartDate);
+                    SELECT SCOPE_IDENTITY();";
 
-                string query = @"INSERT INTO EmployeePayroll
-                         (Name, Salary, StartDate)
-                         VALUES (@Name, @Salary, @StartDate)";
+                        SqlCommand employeeCmd = new SqlCommand(employeeQuery, connection, transaction);
 
-                using (SqlCommand command = new SqlCommand(query, connection))
-                {
-                    command.Parameters.AddWithValue("@Name", emp.Name);
-                    command.Parameters.AddWithValue("@Salary", emp.Salary);
-                    command.Parameters.AddWithValue("@StartDate", emp.StartDate);
-                    Thread.Sleep(500);
-                    command.ExecuteNonQuery();
+                        employeeCmd.Parameters.AddWithValue("@Name", emp.Name);
+                        employeeCmd.Parameters.AddWithValue("@Salary", emp.Salary);
+                        employeeCmd.Parameters.AddWithValue("@StartDate", emp.StartDate);
+
+                        int employeeId = Convert.ToInt32(employeeCmd.ExecuteScalar());
+
+                        Console.WriteLine($"Thread {Thread.CurrentThread.ManagedThreadId} inserted employee {employeeId}");
+
+                        // Insert into payroll_details
+                        string payrollQuery = @"
+                    INSERT INTO payroll_details 
+                    (EmployeeId, BasicPay, Deductions, TaxablePay, IncomeTax, NetPay)
+                    VALUES
+                    (@EmployeeId, @BasicPay, @Deductions, @TaxablePay, @IncomeTax, @NetPay)";
+
+                        SqlCommand payrollCmd = new SqlCommand(payrollQuery, connection, transaction);
+
+                        payrollCmd.Parameters.AddWithValue("@EmployeeId", employeeId);
+                        payrollCmd.Parameters.AddWithValue("@BasicPay", emp.BasicPay);
+                        payrollCmd.Parameters.AddWithValue("@Deductions", emp.Deductions);
+                        payrollCmd.Parameters.AddWithValue("@TaxablePay", emp.TaxablePay);
+                        payrollCmd.Parameters.AddWithValue("@IncomeTax", emp.IncomeTax);
+                        payrollCmd.Parameters.AddWithValue("@NetPay", emp.NetPay);
+
+                        payrollCmd.ExecuteNonQuery();
+
+                        transaction.Commit();
+                    }
+                    catch
+                    {
+                        transaction.Rollback();
+                        throw;
+                    }
                 }
             }
         }
