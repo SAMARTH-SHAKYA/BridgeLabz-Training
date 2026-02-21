@@ -151,5 +151,30 @@ namespace PayrollApp.Tests
             Assert.IsTrue(normalTime >= 0);
             Assert.IsTrue(threadTime >= 0);
         }
+
+
+        [TestMethod]
+        public void GivenMultipleEmployees_WhenSalaryUpdated_ShouldSyncWithDatabase()
+        {
+            PayrollService service = new PayrollService();
+
+            // IMPORTANT: These employees must already exist in DB
+            List<Employee> employees = new List<Employee>
+    {
+        new Employee { Id = 1, Salary = 90000, BasicPay=70000, Deductions=5000, TaxablePay=65000, IncomeTax=6000, NetPay=59000 },
+        new Employee { Id = 2, Salary = 95000, BasicPay=75000, Deductions=6000, TaxablePay=69000, IncomeTax=7000, NetPay=62000 }
+    };
+
+            service.UpdateEmployeesWithThread(employees);
+
+            foreach (var emp in employees)
+            {
+                Employee dbEmp = service.GetEmployeeFromDB(emp.Id);
+
+                Assert.AreEqual(emp.Salary, dbEmp.Salary);
+                Assert.AreEqual(emp.BasicPay, dbEmp.BasicPay);
+                Assert.AreEqual(emp.NetPay, dbEmp.NetPay);
+            }
+        }
     }
 }

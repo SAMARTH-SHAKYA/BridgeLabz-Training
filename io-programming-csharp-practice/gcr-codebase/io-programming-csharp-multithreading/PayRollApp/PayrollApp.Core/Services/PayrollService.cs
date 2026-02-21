@@ -169,5 +169,126 @@ namespace PayrollApp.Core.Services
                 return connectionCounter;
             }
         }
+
+
+        private void UpdateEmployeeSalary(Employee emp)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                Interlocked.Increment(ref connectionCounter);
+
+                using (SqlTransaction transaction = connection.BeginTransaction())
+                {
+                    try
+                    {
+                        // Update employee_payroll
+                        string updateEmployee = @"
+                    UPDATE dbo.employee_payroll
+                    SET Salary = @Salary
+                    WHERE Id = @Id";
+
+                        SqlCommand cmd1 = new SqlCommand(updateEmployee, connection, transaction);
+                        cmd1.Parameters.AddWithValue("@Salary", emp.Salary);
+                        cmd1.Parameters.AddWithValue("@Id", emp.Id);
+                        cmd1.ExecuteNonQuery();
+
+                        // Update payroll_details
+                        string updatePayroll = @"
+                    UPDATE dbo.payroll_details
+                    SET BasicPay = @BasicPay,
+                        Deductions = @Deductions,
+                        TaxablePay = @TaxablePay,
+                        IncomeTax = @IncomeTax,
+                        NetPay = @NetPay
+                    WHERE EmployeeId = @Id";
+
+                        SqlCommand cmd2 = new SqlCommand(updatePayroll, connection, transaction);
+
+                        cmd2.Parameters.AddWithValue("@BasicPay", emp.BasicPay);
+                        cmd2.Parameters.AddWithValue("@Deductions", emp.Deductions);
+                        cmd2.Parameters.AddWithValue("@TaxablePay", emp.TaxablePay);
+                        cmd2.Parameters.AddWithValue("@IncomeTax", emp.IncomeTax);
+                        cmd2.Parameters.AddWithValue("@NetPay", emp.NetPay);
+                        cmd2.Parameters.AddWithValue("@Id", emp.Id);
+
+                        cmd2.ExecuteNonQuery();
+
+                        transaction.Commit();
+                    }
+                    catch
+                    {
+                        transaction.Rollback();
+                        throw;
+                    }
+                }
+            }
+        }
+
+
+        public long UpdateEmployeesWithThread(List<Employee> employees)
+        {
+            Stopwatch stopwatch = new Stopwatch();
+            stopwatch.Start();
+
+            List<Thread> threads = new List<Thread>();
+
+            foreach (var emp in employees)
+            {
+                Thread thread = new Thread(() =>
+                {
+                    Console.WriteLine($"Thread {Thread.CurrentThread.ManagedThreadId} updating {emp.Id}");
+                    UpdateEmployeeSalary(emp);
+                });
+
+                threads.Add(thread);
+                thread.Start();
+            }
+
+            foreach (var thread in threads)
+                thread.Join();
+
+            stopwatch.Stop();
+            return stopwatch.ElapsedMilliseconds;
+        }
+
+
+        public Employee GetEmployeeFromDB(int id)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+
+                string query = @"
+            SELECT e.Id, e.Name, e.Salary,
+                   p.BasicPay, p.Deductions,
+                   p.TaxablePay, p.IncomeTax, p.NetPay
+            FROM dbo.employee_payroll e
+            INNER JOIN dbo.payroll_details p
+            ON e.Id = p.EmployeeId
+            WHERE e.Id = @Id";
+
+                SqlCommand cmd = new SqlCommand(query, connection);
+                cmd.Parameters.AddWithValue("@Id", id);
+
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                if (reader.Read())
+                {
+                    return new Employee
+                    {
+                        Id = (int)reader["Id"],
+                        Name = reader["Name"].ToString(),
+                        Salary = (double)reader["Salary"],
+                        BasicPay = (double)reader["BasicPay"],
+                        Deductions = (double)reader["Deductions"],
+                        TaxablePay = (double)reader["TaxablePay"],
+                        IncomeTax = (double)reader["IncomeTax"],
+                        NetPay = (double)reader["NetPay"]
+                    };
+                }
+            }
+            return null;
+        }
     }
 }
