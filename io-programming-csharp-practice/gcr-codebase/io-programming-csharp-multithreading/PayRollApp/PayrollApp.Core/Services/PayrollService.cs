@@ -9,6 +9,8 @@ namespace PayrollApp.Core.Services
 {
     public class PayrollService
     {
+        private int connectionCounter = 0;
+        private readonly object lockObject = new object();
         private readonly string connectionString =
             "Server=.\\SQLEXPRESS;Database=payroll_service;Trusted_Connection=True;TrustServerCertificate=True;";
 
@@ -100,6 +102,13 @@ namespace PayrollApp.Core.Services
             {
                 connection.Open();
 
+                // Synchronization using lock
+                lock (lockObject)
+                {
+                    connectionCounter++;
+                    Console.WriteLine($"Connection Count: {connectionCounter}");
+                }
+
                 string query = @"INSERT INTO EmployeePayroll
                          (Name, Salary, StartDate)
                          VALUES (@Name, @Salary, @StartDate)";
@@ -112,6 +121,21 @@ namespace PayrollApp.Core.Services
 
                     command.ExecuteNonQuery();
                 }
+            }
+        }
+
+        public void ResetCounter()
+        {
+            lock (lockObject)
+            {
+                connectionCounter = 0;
+            }
+        }
+        public int GetConnectionCount()
+        {
+            lock (lockObject)
+            {
+                return connectionCounter;
             }
         }
     }
