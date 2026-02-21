@@ -25,5 +25,29 @@ namespace PayrollApp.Tests
 
             Assert.IsTrue(executionTime >= 0);
         }
+
+
+        [TestMethod]
+        public void GivenMultipleEmployees_WhenAddedWithAndWithoutThread_ShouldComparePerformance()
+        {
+            PayrollService service = new PayrollService();
+
+            List<Employee> employees = new List<Employee>
+                {
+                    new Employee { Name="Emp1", Salary=50000, StartDate=DateTime.Now },
+                    new Employee { Name="Emp2", Salary=60000, StartDate=DateTime.Now },
+                    new Employee { Name="Emp3", Salary=70000, StartDate=DateTime.Now },
+                    new Employee { Name="Emp4", Salary=80000, StartDate=DateTime.Now }
+                };
+
+            long normalTime = service.AddEmployeesWithoutThread(employees);
+            long threadTime = service.AddEmployeesWithThread(employees);
+
+            Console.WriteLine($"Without Thread: {normalTime} ms");
+            Console.WriteLine($"With Thread: {threadTime} ms");
+
+            Assert.IsTrue(normalTime >= 0);
+            Assert.IsTrue(threadTime >= 0);
+        }
     }
 }
