@@ -58,12 +58,12 @@ namespace PayrollApp.Tests
             PayrollService service = new PayrollService();
 
             List<Employee> employees = new List<Employee>
-    {
-        new Employee { Name="E1", Salary=50000, StartDate=DateTime.Now },
-        new Employee { Name="E2", Salary=60000, StartDate=DateTime.Now },
-        new Employee { Name="E3", Salary=70000, StartDate=DateTime.Now },
-        new Employee { Name="E4", Salary=80000, StartDate=DateTime.Now }
-    };
+                {
+                    new Employee { Name="E1", Salary=50000, StartDate=DateTime.Now },
+                    new Employee { Name="E2", Salary=60000, StartDate=DateTime.Now },
+                    new Employee { Name="E3", Salary=70000, StartDate=DateTime.Now },
+                    new Employee { Name="E4", Salary=80000, StartDate=DateTime.Now }
+                };
 
             service.ResetCounter();
 
@@ -82,6 +82,26 @@ namespace PayrollApp.Tests
             Console.WriteLine($"With Thread Connections: {threadConnections}");
 
             Assert.IsTrue(threadConnections == employees.Count);
+        }
+
+        [TestMethod]
+        public void GivenMultipleEmployees_WhenUsingThread_ShouldShowThreadExecutionLogs()
+        {
+            PayrollService service = new PayrollService();
+
+            List<Employee> employees = new List<Employee>
+                    {
+                        new Employee { Name="Emp1", Salary=50000, StartDate=DateTime.Now },
+                        new Employee { Name="Emp2", Salary=60000, StartDate=DateTime.Now },
+                        new Employee { Name="Emp3", Salary=70000, StartDate=DateTime.Now },
+                        new Employee { Name="Emp4", Salary=80000, StartDate=DateTime.Now }
+                    };
+
+            long normalTime = service.AddEmployeesWithoutThread(employees);
+            long threadTime = service.AddEmployeesWithThread(employees);
+
+            Assert.IsTrue(normalTime >= 0);
+            Assert.IsTrue(threadTime >= 0);
         }
     }
 }

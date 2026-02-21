@@ -65,10 +65,13 @@ namespace PayrollApp.Core.Services
 
             foreach (var emp in employees)
             {
+                Console.WriteLine($"Main Thread {Thread.CurrentThread.ManagedThreadId} processing {emp.Name}");
                 AddEmployee(emp);
             }
 
             stopwatch.Stop();
+            Console.WriteLine($"Total Time (Without Thread): {stopwatch.ElapsedMilliseconds} ms");
+
             return stopwatch.ElapsedMilliseconds;
         }
 
@@ -81,17 +84,25 @@ namespace PayrollApp.Core.Services
 
             foreach (var emp in employees)
             {
-                Thread thread = new Thread(() => AddEmployee(emp));
+                Thread thread = new Thread(() =>
+                {
+                    Console.WriteLine($"Thread {Thread.CurrentThread.ManagedThreadId} STARTED for {emp.Name}");
+                    AddEmployee(emp);
+                    Console.WriteLine($"Thread {Thread.CurrentThread.ManagedThreadId} COMPLETED for {emp.Name}");
+                });
+
                 threads.Add(thread);
                 thread.Start();
             }
 
             foreach (var thread in threads)
             {
-                thread.Join(); // wait for all threads
+                thread.Join();
             }
 
             stopwatch.Stop();
+            Console.WriteLine($"Total Time (With Thread): {stopwatch.ElapsedMilliseconds} ms");
+
             return stopwatch.ElapsedMilliseconds;
         }
 
@@ -118,7 +129,7 @@ namespace PayrollApp.Core.Services
                     command.Parameters.AddWithValue("@Name", emp.Name);
                     command.Parameters.AddWithValue("@Salary", emp.Salary);
                     command.Parameters.AddWithValue("@StartDate", emp.StartDate);
-
+                    Thread.Sleep(500);
                     command.ExecuteNonQuery();
                 }
             }
