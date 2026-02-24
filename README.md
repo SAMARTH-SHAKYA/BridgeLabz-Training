@@ -675,6 +675,46 @@
 ### 🔮 Upcoming Learning
 - ADO .NET
 
+--------
+## 📅 Day 45
+**Date:** 13-02-2026(Friday)
+### 📘 What I Learned
+- ADO.NET Basics
+
+### 📝 Assignment for the Day
+- Creating a database for a console application(Health care)
+- Connection of the database with console application(health care)
+
+### 🔮 Upcoming Learning
+- Core ADO.NET Classes
+
+--------
+## 📅 Day 46
+**Date:** 14-02-2026(Saturday)
+### 📘 What I Learned
+- Core ADO.NET Classes
+- DataAdapter & DataSet (Disconnected Architecture)
+- CRUD Operations using ADO.NET
+
+### 📝 Assignment for the Day
+- CRUD Operations using ADO.NET (health care)
+
+### 🔮 Upcoming Learning
+- Remaining topics of ADO .NET
+
+--------
+## 📅 Day 46
+**Date:** 16-02-2026(Monday)
+### 📘 What I Learned
+- Stored Procedures with ADO.NET
+- Connection Pooling
+- CRUD Operations using ADO.NET
+
+### 📝 Assignment for the Day
+- Full implementation of console application (health care)
+
+### 🔮 Upcoming Learning
+- ASP .NET
 
 
   
