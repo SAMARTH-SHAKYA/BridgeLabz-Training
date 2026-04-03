@@ -1,0 +1,12 @@
+C:\Users\samar\OneDrive\Desktop\PayRollApp\PayrollApp.Core\bin\Debug\net10.0\PayrollApp.Core.deps.json
+C:\Users\samar\OneDrive\Desktop\PayRollApp\PayrollApp.Core\bin\Debug\net10.0\PayrollApp.Core.dll
+C:\Users\samar\OneDrive\Desktop\PayRollApp\PayrollApp.Core\bin\Debug\net10.0\PayrollApp.Core.pdb
+C:\Users\samar\OneDrive\Desktop\PayRollApp\PayrollApp.Core\obj\Debug\net10.0\PayrollApp.Core.csproj.AssemblyReference.cache
+C:\Users\samar\OneDrive\Desktop\PayRollApp\PayrollApp.Core\obj\Debug\net10.0\PayrollApp.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\samar\OneDrive\Desktop\PayRollApp\PayrollApp.Core\obj\Debug\net10.0\PayrollApp.Core.AssemblyInfoInputs.cache
+C:\Users\samar\OneDrive\Desktop\PayRollApp\PayrollApp.Core\obj\Debug\net10.0\PayrollApp.Core.AssemblyInfo.cs
+C:\Users\samar\OneDrive\Desktop\PayRollApp\PayrollApp.Core\obj\Debug\net10.0\PayrollApp.Core.csproj.CoreCompileInputs.cache
+C:\Users\samar\OneDrive\Desktop\PayRollApp\PayrollApp.Core\obj\Debug\net10.0\PayrollApp.Core.dll
+C:\Users\samar\OneDrive\Desktop\PayRollApp\PayrollApp.Core\obj\Debug\net10.0\refint\PayrollApp.Core.dll
+C:\Users\samar\OneDrive\Desktop\PayRollApp\PayrollApp.Core\obj\Debug\net10.0\PayrollApp.Core.pdb
+C:\Users\samar\OneDrive\Desktop\PayRollApp\PayrollApp.Core\obj\Debug\net10.0\ref\PayrollApp.Core.dll
