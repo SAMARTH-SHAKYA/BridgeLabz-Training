@@ -1,0 +1,19 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace BridgeLabzTraining.oops_csharp_encapsulation_polymorphism_interface_abstract_class.banking_system
+{
+    internal class CurrentAccount : BankAccount
+    {
+        public CurrentAccount(string accNo, string name, double balance)
+            : base(accNo, name, balance)
+        {
+        }
+
+        public override double CalculateInterest()
+        {
+            return Balance * 0.02;
+        }
+    }
+}
