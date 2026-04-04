@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AddressBookSystem")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4051a04606c451321542730bef61af2f3556a6b9")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3cda331c0230d5027c6b89c3edf0d4856fec8159")]
 [assembly: System.Reflection.AssemblyProductAttribute("AddressBookSystem")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AddressBookSystem")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
